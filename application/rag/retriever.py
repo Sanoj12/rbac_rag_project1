@@ -3,7 +3,9 @@ from application.rag.embedding import create_embeddings
 
 from application.rag.llm import generate_answer
 from application.rag.bm25_search import bm25,bm25_search,documents
+from application.rag.reranking import reranker_documents
 import time
+
 
 
 def retrieve_answer(query,department):
@@ -50,8 +52,14 @@ def retrieve_answer(query,department):
     combined = list(unique_docs.values())
 
 
+    
 
-    response =[doc["text"] for doc in combined]
+    top_documents = reranker_documents(
+    query,
+    combined,
+    top_k=3
+    )
+    response =[doc["text"] for doc in top_documents]
     print(response)
 
 
