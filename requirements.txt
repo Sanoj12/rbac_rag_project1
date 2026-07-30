@@ -1,0 +1,17 @@
+langchain
+langchain-community
+langchain_text_splitters 
+langchain_huggingface
+docling
+fastapi
+uvicorn
+pytest
+streamlit
+requests
+pyjwt
+bcrypt
+sqlalchemy
+pinecone-client
+python-dotenv
+sentence-transformers
+ollama
