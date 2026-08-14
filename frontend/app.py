@@ -1,13 +1,15 @@
 import streamlit as st
 import requests
 import ast
-
+import os
 
 # =========================================================
 # CONFIG
 # =========================================================
 
-API_URL = "http://localhost:8000"
+
+
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 # User whose department is "Admin" gets Admin Dashboard
 ADMIN_DEPARTMENT = "Admin"
