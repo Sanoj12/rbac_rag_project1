@@ -281,19 +281,7 @@ def logout():
 
 if not st.session_state.logged_in:
 
-    # -----------------------------------------------------
-    # LOGIN HEADER
-    # -----------------------------------------------------
-
-    st.title(
-        "🤖 SecureRAG"
-    )
-
-    st.write(
-        "Secure Enterprise Knowledge Assistant"
-    )
-
-    st.divider()
+    
 
     # -----------------------------------------------------
     # LOGIN
