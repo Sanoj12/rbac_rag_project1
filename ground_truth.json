@@ -1,0 +1,1220 @@
+[
+    {
+        "chunk_id": 0,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "Where is the company Technologies headquartered?",
+        "ground_truth": "Technologies is headquartered in Bangalore, India."
+    },
+    {
+        "chunk_id": 1,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of this engineering document?",
+        "ground_truth": "This engineering document outlines the technical architecture, development processes, and operational guidelines for FinSolve's product ecosystem."
+    },
+    {
+        "chunk_id": 2,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What topics are covered in this document?",
+        "ground_truth": "This document covers: System architecture and infrastructure, Software development lifecycle (SDLC), Technology stack, Security and compliance frameworks, Testing and quality assurance methodologies, Deployment and DevOps practices, Monitoring and maintenance protocols, and Future technology roadmap."
+    },
+    {
+        "chunk_id": 3,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the date of the initial version of the document?",
+        "ground_truth": "The initial version was created on 2025-05-01."
+    },
+    {
+        "chunk_id": 4,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of system design does FinSolve's architecture use?",
+        "ground_truth": "FinSolve's architecture is a microservices-based, cloud-native system."
+    },
+    {
+        "chunk_id": 5,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary function of the Redis component in the Data Layer?",
+        "ground_truth": "Redis is used for Caching and Session Management."
+    },
+    {
+        "chunk_id": 6,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the key components of the infrastructure?",
+        "ground_truth": "The key components of the infrastructure are AWS, Kubernetes, and Cloudflare."
+    },
+    {
+        "chunk_id": 7,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used to develop the Web Application?",
+        "ground_truth": "The Web Application is built with React, Redux, and Tailwind CSS."
+    },
+    {
+        "chunk_id": 8,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of APIs are enabled for third-party integrations and partner systems?",
+        "ground_truth": "RESTful and GraphQL APIs are enabled for third-party integrations, partner systems, and future expansions."
+    },
+    {
+        "chunk_id": 9,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary function of the API Gateway?",
+        "ground_truth": "It serves as a centralized entry point for all client requests."
+    },
+    {
+        "chunk_id": 10,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of authentication does the Authentication Service use?",
+        "ground_truth": "The Authentication Service uses OAuth 2.0."
+    },
+    {
+        "chunk_id": 11,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of data does the Analytics Service process?",
+        "ground_truth": "The Analytics Service processes user financial data."
+    },
+    {
+        "chunk_id": 12,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of data store is used for caching, session management, and pub/sub messaging between services?",
+        "ground_truth": "Redis is used for caching, session management, and pub/sub messaging between services."
+    },
+    {
+        "chunk_id": 13,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What cloud provider is the primary cloud provider utilizing EC2, ECS, Lambda, RDS, S3, CloudFront, and other managed services?",
+        "ground_truth": "AWS is the primary cloud provider utilizing EC2, ECS, Lambda, RDS, S3, CloudFront, and other managed services."
+    },
+    {
+        "chunk_id": 14,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What enables seamless scaling in the described architecture?",
+        "ground_truth": "Microservices designed to be stateless."
+    },
+    {
+        "chunk_id": 15,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What method does PostgreSQL use for sharding high-volume transactional tables?",
+        "ground_truth": "PostgreSQL uses range-based sharding for high-volume transactional tables."
+    },
+    {
+        "chunk_id": 16,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What caching strategies are used in the system?",
+        "ground_truth": "The system uses a multi-level caching architecture with application-level caching with Redis, API Gateway response caching, CDN caching for static assets, and database query result caching."
+    },
+    {
+        "chunk_id": 17,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How are circuit breakers implemented in the system?",
+        "ground_truth": "Circuit breakers are implemented using Istio service mesh to prevent cascading failures."
+    },
+    {
+        "chunk_id": 18,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the Recovery Time Objective (RTO) for disaster recovery in this system?",
+        "ground_truth": "The Recovery Time Objective (RTO) is 4 hours."
+    },
+    {
+        "chunk_id": 19,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What pattern is used for distributed transactions across microservices?",
+        "ground_truth": "The Saga pattern is used for distributed transactions across microservices."
+    },
+    {
+        "chunk_id": 20,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used for testing the Backend layer?",
+        "ground_truth": "Jest, Pytest, Go test are used for testing the Backend layer."
+    },
+    {
+        "chunk_id": 21,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is an example of a tool used for testing containers in the provided dataset?",
+        "ground_truth": "TestContainers is an example of a tool used for testing containers in the provided dataset."
+    },
+    {
+        "chunk_id": 22,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used for security in the provided system?",
+        "ground_truth": "The tools used for security in the provided system are OAuth 2.0, JWT, AWS WAF, Cloudflare, Vault, CertManager, and OPA."
+    },
+    {
+        "chunk_id": 23,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the preferred response time for critical paths in the selected technologies?",
+        "ground_truth": "Technologies that deliver sub-200ms response times for critical paths."
+    },
+    {
+        "chunk_id": 24,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one of the goals of Cost Efficiency?",
+        "ground_truth": "Balance between performance and operational costs."
+    },
+    {
+        "chunk_id": 25,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are major versions of dependencies upgraded?",
+        "ground_truth": "Major versions of dependencies are upgraded quarterly."
+    },
+    {
+        "chunk_id": 26,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How long does the Sprint Planning ceremony last?",
+        "ground_truth": "Product owners and engineering leads define sprint goals and prioritize tasks (4 hours)."
+    },
+    {
+        "chunk_id": 27,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary responsibility of the Scrum Master?",
+        "ground_truth": "Facilitates ceremonies, removes impediments, coaches team."
+    },
+    {
+        "chunk_id": 28,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How do product managers create user stories in Jira?",
+        "ground_truth": "Product managers create user stories in Jira following the format: 'As a [user role], I want [feature] so that [benefit].'"
+    },
+    {
+        "chunk_id": 29,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used for creating API specifications in the design phase?",
+        "ground_truth": "API specifications are defined using OpenAPI/Swagger with clear request/response examples."
+    },
+    {
+        "chunk_id": 30,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What style guide is enforced for JavaScript/TypeScript code via linters?",
+        "ground_truth": "ESLint with Airbnb configuration is enforced for JavaScript/TypeScript code via linters."
+    },
+    {
+        "chunk_id": 31,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the minimum requirements for code review in terms of automated checks?",
+        "ground_truth": "Automated checks must pass before code review, including linting and style validation, unit test coverage (minimum 85%), and no security vulnerabilities (via Snyk)."
+    },
+    {
+        "chunk_id": 32,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the sequence of automated tests in the testing process?",
+        "ground_truth": "Automated tests run in the following sequence: Unit tests, Integration tests, End-to-end tests, Performance tests."
+    },
+    {
+        "chunk_id": 33,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are production releases scheduled in the deployment pipeline?",
+        "ground_truth": "Scheduled bi-weekly."
+    },
+    {
+        "chunk_id": 34,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the branch strategy used in the Git workflow?",
+        "ground_truth": "The branch strategy used in the Git workflow is Gitflow."
+    },
+    {
+        "chunk_id": 35,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What prefix is used for new features in commit messages?",
+        "ground_truth": "feat:"
+    },
+    {
+        "chunk_id": 36,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the versioning system used for releases?",
+        "ground_truth": "Semantic versioning (MAJOR.MINOR.PATCH) is used for releases."
+    },
+    {
+        "chunk_id": 37,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What methods are used for multi-factor authentication in the system?",
+        "ground_truth": "Multi-factor authentication is via SMS, email, or authenticator apps."
+    },
+    {
+        "chunk_id": 38,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is mentioned as a practice for fine-grained permissions in the source file?",
+        "ground_truth": "Attribute-Based Access Control (ABAC) for fine-grained permissions involves regular permission audits and least-privilege enforcement."
+    },
+    {
+        "chunk_id": 39,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What encryption method is used for data at rest?",
+        "ground_truth": "AES-256 encryption using AWS KMS is used for data at rest."
+    },
+    {
+        "chunk_id": 40,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used as a secondary defense layer for network protection?",
+        "ground_truth": "Network ACLs are used as a secondary defense layer."
+    },
+    {
+        "chunk_id": 41,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of the compliance frameworks mentioned in this section?",
+        "ground_truth": "the compliance frameworks"
+    },
+    {
+        "chunk_id": 42,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one of the requirements for Level 1 compliance under the Payment Card Industry Data Security Standard (PCI-DSS)?",
+        "ground_truth": "Regular penetration testing is one of the requirements for Level 1 compliance under the Payment Card Industry Data Security Standard (PCI-DSS)."
+    },
+    {
+        "chunk_id": 43,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one method mentioned for ensuring Level 1 compliance for payment processing?",
+        "ground_truth": "Regular penetration testing is one method mentioned for ensuring Level 1 compliance for payment processing."
+    },
+    {
+        "chunk_id": 44,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of audits are performed to ensure compliance?",
+        "ground_truth": "Quarterly internal audits and Annual external audits are performed to ensure compliance."
+    },
+    {
+        "chunk_id": 45,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the remediation timeframe for vulnerabilities classified as High?",
+        "ground_truth": "Remediation within 7 days."
+    },
+    {
+        "chunk_id": 46,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the four incident classification levels in the incident response procedure?",
+        "ground_truth": "The four incident classification levels are P0: Critical, P1: High, P2: Medium, and P3: Low."
+    },
+    {
+        "chunk_id": 47,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the main steps involved in the incident response process?",
+        "ground_truth": "The main steps involved in the incident response process are Identification and containment, Evidence collection, Remediation and recovery, and Post-incident analysis and lessons learned."
+    },
+    {
+        "chunk_id": 48,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of security training is provided for developers and administrators?",
+        "ground_truth": "Role-specific security training is provided for developers and administrators."
+    },
+    {
+        "chunk_id": 49,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What percentage of the code base is covered by unit tests?",
+        "ground_truth": "90% of the code base is covered by unit tests."
+    },
+    {
+        "chunk_id": 50,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used to implement End-to-End Tests?",
+        "ground_truth": "Cypress (web) and Appium (mobile) are used to implement End-to-End Tests."
+    },
+    {
+        "chunk_id": 51,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the target for API response time in performance testing?",
+        "ground_truth": "API response time: P95 < 200ms"
+    },
+    {
+        "chunk_id": 52,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of accessibility testing is required for critical components?",
+        "ground_truth": "WCAG 2.1 AA compliance, screen reader compatibility, and keyboard navigation support are required."
+    },
+    {
+        "chunk_id": 53,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How many attempts are made for automatic retry of flaky tests?",
+        "ground_truth": "Automatic retry for flaky tests (maximum 3 attempts)."
+    },
+    {
+        "chunk_id": 54,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the minimum test coverage required by Codecov?",
+        "ground_truth": "Codecov enforces minimum 85% test coverage."
+    },
+    {
+        "chunk_id": 55,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the required fields for logging and tracking defects in Jira?",
+        "ground_truth": "The required fields are steps to reproduce, expected vs. actual results, and environment."
+    },
+    {
+        "chunk_id": 56,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the resolution time for a defect with SLA S3?",
+        "ground_truth": "Resolution within 2 weeks."
+    },
+    {
+        "chunk_id": 57,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What happens when a commit is triggered in the CI/CD pipeline?",
+        "ground_truth": "Every commit triggers code compilation and static analysis, unit and integration tests, security scanning, and code quality checks."
+    },
+    {
+        "chunk_id": 58,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are scheduled deployments performed in the Production Environment?",
+        "ground_truth": "Scheduled deployments are performed bi-weekly in the Production Environment."
+    },
+    {
+        "chunk_id": 59,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used for deployment monitoring in the pipeline?",
+        "ground_truth": "Prometheus and Grafana are used for deployment monitoring."
+    },
+    {
+        "chunk_id": 60,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of database services are managed by Terraform Modules?",
+        "ground_truth": "Database services (RDS, DynamoDB) are managed by Terraform Modules."
+    },
+    {
+        "chunk_id": 61,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What method is used for environment-specific configurations in the application?",
+        "ground_truth": "Kustomize is used for environment-specific configurations."
+    },
+    {
+        "chunk_id": 62,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used for image scanning in Docker Standards?",
+        "ground_truth": "Trivy is used for image scanning in Docker Standards."
+    },
+    {
+        "chunk_id": 63,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used to control pod-to-pod communication in Kubernetes?",
+        "ground_truth": "Network policies are used to control pod-to-pod communication."
+    },
+    {
+        "chunk_id": 64,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the frequency of the release schedule?",
+        "ground_truth": "The release schedule is bi-weekly."
+    },
+    {
+        "chunk_id": 65,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the process for addressing critical issues in the code?",
+        "ground_truth": "Critical issues are patched directly from `main` with immediate deployment and post-deployment verification."
+    },
+    {
+        "chunk_id": 66,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of metrics are included in the Infrastructure Metrics category?",
+        "ground_truth": "CPU, memory, disk usage, Network throughput and latency, Container health and resource utilization."
+    },
+    {
+        "chunk_id": 67,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the maximum allowed API latency according to the Technical KPIs?",
+        "ground_truth": "P95 < 200ms"
+    },
+    {
+        "chunk_id": 68,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary alert channel used for critical incidents?",
+        "ground_truth": "PagerDuty is used for critical incidents (24/7 response)."
+    },
+    {
+        "chunk_id": 69,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the structured logging format used in the ELK Stack?",
+        "ground_truth": "JSON"
+    },
+    {
+        "chunk_id": 70,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the retention policy for logs stored in cold storage?",
+        "ground_truth": "Logs stored in cold storage are archived in S3 for 1 year."
+    },
+    {
+        "chunk_id": 71,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are critical security patches applied?",
+        "ground_truth": "Critical security patches are applied within 48 hours."
+    },
+    {
+        "chunk_id": 72,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What percentage of sprint capacity is dedicated to technical debt management?",
+        "ground_truth": "Dedicated 20% of sprint capacity to technical debt."
+    },
+    {
+        "chunk_id": 73,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the goals of the Personalized Financial Insights initiative?",
+        "ground_truth": "Spending pattern recognition, Anomaly detection for fraud prevention, and Budget recommendations based on user behavior."
+    },
+    {
+        "chunk_id": 74,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of transaction verification does the system support?",
+        "ground_truth": "The system supports blockchain-based transaction verification."
+    },
+    {
+        "chunk_id": 75,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What languages does the system support for right-to-left (RTL) language support?",
+        "ground_truth": "Hindi, Spanish, Mandarin, and Arabic support right-to-left (RTL) language support."
+    },
+    {
+        "chunk_id": 76,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What geographic regions are targeted for global market expansion?",
+        "ground_truth": "Latin America (Brazil, Mexico), Africa (Nigeria, Kenya), and Southeast Asia (Vietnam, Philippines) are targeted for global market expansion."
+    },
+    {
+        "chunk_id": 77,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is included in the Regulatory Compliance section of the Open Banking Ecosystem?",
+        "ground_truth": "PSD2 and equivalent standards, Strong Customer Authentication (SCA), and Consent management framework are included in the Regulatory Compliance section of the Open Banking Ecosystem."
+    },
+    {
+        "chunk_id": 78,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the cost model for Serverless Architecture?",
+        "ground_truth": "Pay-per-use cost model"
+    },
+    {
+        "chunk_id": 79,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the properties of database transactions?",
+        "ground_truth": "Atomicity, Consistency, Isolation, Durability"
+    },
+    {
+        "chunk_id": 80,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the industry-standard protocol for authorization?",
+        "ground_truth": "OAuth 2.0 is the industry-standard protocol for authorization."
+    },
+    {
+        "chunk_id": 81,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of the document 'PCI-DSS Guidelines'?",
+        "ground_truth": "Payment security compliance"
+    },
+    {
+        "chunk_id": 82,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the response SLA for the Engineering Lead team?",
+        "ground_truth": "The response SLA for the Engineering Lead team is 4 hours."
+    },
+    {
+        "chunk_id": 83,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "When was the document last updated?",
+        "ground_truth": "The document was last updated on May 14, 2025."
+    },
+    {
+        "chunk_id": 0,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What is the source of the financial report?",
+        "ground_truth": "the financial report for FinSolve Technologies Inc. - 2024"
+    },
+    {
+        "chunk_id": 1,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What is the purpose of the document?",
+        "ground_truth": "This document is an Executive Summary."
+    },
+    {
+        "chunk_id": 2,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What were the pressures faced by FinSolve Technologies in certain expense categories in 2024?",
+        "ground_truth": "we saw significant pressure in certain expense categories, notably vendor-related costs and software subscriptions."
+    },
+    {
+        "chunk_id": 3,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "Will the company be able to maintain profitability in the coming years?",
+        "ground_truth": "Focused attention on cost optimization will be essential for maintaining profitability in the coming years."
+    },
+    {
+        "chunk_id": 4,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What is the type of analysis described in this section?",
+        "ground_truth": "This section describes a Year-Over-Year (YoY) Analysis."
+    },
+    {
+        "chunk_id": 5,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What was the increase in net income in 2024 compared to the previous year?",
+        "ground_truth": "This suggests that while revenue growth is strong, controlling vendor costs and maintaining healthy cash flows remain key to net income saw a more modest increase of 12%."
+    },
+    {
+        "chunk_id": 6,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What are the key factors to long-term profitability?",
+        "ground_truth": "Controlling vendor costs and maintaining healthy cash flows remain key to long-term profitability."
+    },
+    {
+        "chunk_id": 7,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What were the primary drivers of expense in 2024?",
+        "ground_truth": "The primary drivers of expense in 2024 were: rule: 1."
+    },
+    {
+        "chunk_id": 8,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What percentage of vendor services was allocated to software subscriptions?",
+        "ground_truth": "Software subscriptions accounted for 25% of vendor services."
+    },
+    {
+        "chunk_id": 9,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What categories of the marketing budget need tighter management?",
+        "ground_truth": "The Dinner and Training categories need tighter management, potentially through vendor renegotiations or reduced event frequency."
+    },
+    {
+        "chunk_id": 10,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What area of expense could benefit from more rigorous contract negotiation and potential consolidation of service providers?",
+        "ground_truth": "Software Subscriptions"
+    },
+    {
+        "chunk_id": 11,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What was the percentage increase in HR expenses due to employee growth?",
+        "ground_truth": "HR expenses saw a 10% increase."
+    },
+    {
+        "chunk_id": 12,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What was the impact of delayed payment cycles from key vendors on FinSolve Technologies's cash liquidity?",
+        "ground_truth": "These delays slightly impacted cash liquidity during the second half of 2024."
+    },
+    {
+        "chunk_id": 13,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What impact did investments in research and development, new market entry, and acquisitions have on short-term liquidity?",
+        "ground_truth": "These investments reduced short-term liquidity, which is something that should be monitored closely."
+    },
+    {
+        "chunk_id": 14,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What was the net cash inflow from financing activities?",
+        "ground_truth": "Financing activities remained consistent, with a small net cash inflow of $5M."
+    },
+    {
+        "chunk_id": 15,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What is the net margin of FinSolve Technologies compared to the industry benchmark?",
+        "ground_truth": "FinSolve Technologies\u2019s stable net margin indicates sound control over both direct and indirect costs, though further improvement is possible with better vendor management."
+    },
+    {
+        "chunk_id": 16,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What does a high DSO indicate?",
+        "ground_truth": "A high DSO indicates that receivables collection could be improved."
+    },
+    {
+        "chunk_id": 17,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What will be crucial for future profitability?",
+        "ground_truth": "managing vendor expenses and tightening accounts payable and receivable processes"
+    },
+    {
+        "chunk_id": 18,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What is one recommendation to improve cash flow?",
+        "ground_truth": "Automating the accounts payable process will reduce human errors, speed up payments, and help reduce overdue payments, which will positively impact cash flow."
+    },
+    {
+        "chunk_id": 19,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What is one suggestion for reducing HR administrative costs?",
+        "ground_truth": "using technology"
+    },
+    {
+        "chunk_id": 20,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What is a suggested strategy to mitigate the risk of Vendor Cost Inflation?",
+        "ground_truth": "A comprehensive vendor risk management plan should be developed, ensuring that contracts are regularly reviewed, and prices negotiated."
+    },
+    {
+        "chunk_id": 21,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What can improve cash flow volatility?",
+        "ground_truth": "Improved working capital management and streamlining payment processes can significantly reduce this risk."
+    },
+    {
+        "chunk_id": 22,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What can FinSolve Technologies do to mitigate the challenge of maintaining operational efficiency as it scales?",
+        "ground_truth": "investing in automation, streamlining workflows, and maintaining a leaner organizational structure"
+    },
+    {
+        "chunk_id": 23,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "What action should FinSolve Technologies take to ensure adherence to local laws and regulations?",
+        "ground_truth": "FinSolve Technologies must invest in legal and compliance teams."
+    },
+    {
+        "chunk_id": 24,
+        "department": "finance",
+        "file_name": "financial_summary.md",
+        "question": "Where can we find detailed tables and charts for the financial statements?",
+        "ground_truth": "Detailed tables and charts are available in the financial statements section of the main report."
+    },
+    {
+        "chunk_id": 0,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the purpose of the Employee Handbook?",
+        "ground_truth": "This Employee Handbook is intended to provide a comprehensive guide to the policies, procedures, and benefits available to employees of the company."
+    },
+    {
+        "chunk_id": 1,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What section of the document is dedicated to employee benefits?",
+        "ground_truth": "Employee Onboarding & Benefits"
+    },
+    {
+        "chunk_id": 2,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the section number of Exit Policy in the provided list?",
+        "ground_truth": "12"
+    },
+    {
+        "chunk_id": 3,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the mission of FinSolve Technologies?",
+        "ground_truth": "Our mission is to deliver high-quality, sustainable products and services that create value for our stakeholders."
+    },
+    {
+        "chunk_id": 4,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is one of the core values that involves treating everyone with dignity?",
+        "ground_truth": "We value diversity and treat everyone with dignity."
+    },
+    {
+        "chunk_id": 5,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is FinSolve Technologies' founding year?",
+        "ground_truth": "FinSolve Technologies was founded in 2016."
+    },
+    {
+        "chunk_id": 6,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the purpose of the buddy program in the onboarding process?",
+        "ground_truth": "The buddy program is part of the first week of onboarding, where role-specific training is also provided."
+    },
+    {
+        "chunk_id": 7,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the maximum monthly salary limit for employees covered under the Employee State Insurance (ESI)?",
+        "ground_truth": "For employees earning \u2264 \u20b921,000/month;"
+    },
+    {
+        "chunk_id": 8,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the minimum percentage of basic salary required for bonus as per the Payment of Bonus Act?",
+        "ground_truth": "As per Payment of Bonus Act; minimum 8.33% of basic salary"
+    },
+    {
+        "chunk_id": 9,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What type of insurance coverage is provided for accidental death or disability?",
+        "ground_truth": "Additional coverage for accidental death or disability."
+    },
+    {
+        "chunk_id": 10,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What type of flexible work arrangements are available?",
+        "ground_truth": "Remote work, flexible hours (role-dependent)."
+    },
+    {
+        "chunk_id": 11,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the first rule of the leave policies?",
+        "ground_truth": "the question must be answerable from the source chunk."
+    },
+    {
+        "chunk_id": 12,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the entitlement for Privilege/Annual leave?",
+        "ground_truth": "15-21 days/year (as per state Shops & Establishments Act); accrued monthly"
+    },
+    {
+        "chunk_id": 13,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "How many days of bereavement leave are provided for immediate family?",
+        "ground_truth": "3-7 days for immediate family (company policy)"
+    },
+    {
+        "chunk_id": 14,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the minimum notice period required for a leave application, excluding emergencies?",
+        "ground_truth": "at least 3 days in advance"
+    },
+    {
+        "chunk_id": 15,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "How are restricted holidays allocated to employees?",
+        "ground_truth": "Employees may choose restricted holidays as per personal preference."
+    },
+    {
+        "chunk_id": 16,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the standard number of hours an employee is expected to work per day?",
+        "ground_truth": "9 hours/day (including 1 hour break)"
+    },
+    {
+        "chunk_id": 17,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the disciplinary action for three or more late arrivals in a month?",
+        "ground_truth": "Three or more late arrivals in a month may attract disciplinary action."
+    },
+    {
+        "chunk_id": 18,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "Is overtime paid at a rate higher than the regular wage rate?",
+        "ground_truth": "Overtime is paid at double the regular wage rate."
+    },
+    {
+        "chunk_id": 19,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is expected of employees in terms of maintaining a work environment?",
+        "ground_truth": "Maintain a positive, inclusive, and harassment-free environment."
+    },
+    {
+        "chunk_id": 20,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the dress code policy on Fridays?",
+        "ground_truth": "Smart casuals or ethnic wear on Fridays and special occasions."
+    },
+    {
+        "chunk_id": 21,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What happens if an employee is found violating the substance abuse policy?",
+        "ground_truth": "Violation may lead to immediate termination and legal action."
+    },
+    {
+        "chunk_id": 22,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the timeframe for resolving formal complaints?",
+        "ground_truth": "Formal complaints investigated impartially and resolved within 30 days."
+    },
+    {
+        "chunk_id": 23,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What should be done in case of an accident, injury, or near-miss?",
+        "ground_truth": "Report all accidents, injuries, or near-misses to HR and Safety Officer immediately."
+    },
+    {
+        "chunk_id": 24,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "How often are fire drills conducted?",
+        "ground_truth": "Fire drills are conducted quarterly."
+    },
+    {
+        "chunk_id": 25,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What percentage of the basic salary is the minimum bonus?",
+        "ground_truth": "Minimum 8.33% of basic salary, as per law."
+    },
+    {
+        "chunk_id": 26,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the basis for ESI?",
+        "ground_truth": "For eligible employees"
+    },
+    {
+        "chunk_id": 27,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the timeframe for resolving payroll discrepancies?",
+        "ground_truth": "Issues resolved within 7 working days."
+    },
+    {
+        "chunk_id": 28,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What type of expenses are eligible for reimbursement under the company's policies?",
+        "ground_truth": "Eligible expenses include Travel, Accommodation, Meals, and Office Supplies."
+    },
+    {
+        "chunk_id": 29,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the time limit for submitting expense claims via HRMS?",
+        "ground_truth": "Claims must be submitted within 30 days of incurring the expense."
+    },
+    {
+        "chunk_id": 30,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the time limit for submitting a claim for reimbursement after a business trip?",
+        "ground_truth": "Submit your claim within 30 days for reimbursement."
+    },
+    {
+        "chunk_id": 31,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the maximum amount that can be reimbursed for relevant courses per year?",
+        "ground_truth": "Up to \u20b950,000/year for relevant courses, subject to manager and HR approval."
+    },
+    {
+        "chunk_id": 32,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "How often do employees receive performance reviews?",
+        "ground_truth": "Annual and mid-year reviews."
+    },
+    {
+        "chunk_id": 33,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What are the consequences for an employee who does not improve under a Performance Improvement Plan (PIP)?",
+        "ground_truth": "Termination if no improvement."
+    },
+    {
+        "chunk_id": 34,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What should employees do if they suspect a data breach?",
+        "ground_truth": "Report data breaches to IT security team immediately."
+    },
+    {
+        "chunk_id": 35,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What measures does the company take to ensure the security of its data?",
+        "ground_truth": "The company performs regular security audits and employee training, and data is stored on secure, encrypted servers."
+    },
+    {
+        "chunk_id": 36,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What is the typical notice period for resignation as per the appointment letter?",
+        "ground_truth": "Notice period as per appointment letter (typically 30-90 days)."
+    },
+    {
+        "chunk_id": 37,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "How long does it take to process Full & Final Settlement after an employee exits?",
+        "ground_truth": "Processed within 30-60 days of exit, including leave encashment and statutory dues."
+    },
+    {
+        "chunk_id": 38,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What happens if I forget to mark attendance?",
+        "ground_truth": "Inform HR within 24 hours; repeated lapses may lead to deduction or disciplinary action."
+    },
+    {
+        "chunk_id": 39,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "How many days per week can I work from home?",
+        "ground_truth": "Up to 2 days/week, subject to manager and business approval."
+    },
+    {
+        "chunk_id": 40,
+        "department": "general",
+        "file_name": "employee_handbook.md",
+        "question": "What should be done with mobile phones in work areas?",
+        "ground_truth": "Mobile phones should be on silent in work areas."
+    },
+    {
+        "chunk_id": 0,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What is the source file for the marketing report?",
+        "ground_truth": "Marketing Report for FinSolve Technologies Inc. - 2024"
+    },
+    {
+        "chunk_id": 1,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What is the purpose of the provided document chunk?",
+        "ground_truth": "This is an Executive Summary."
+    },
+    {
+        "chunk_id": 2,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What were the results of the Marketing Department's efforts at FinSolve Technologies in 2024?",
+        "ground_truth": "The department\u2019s efforts resulted in a 20% increase in new customer acquisition, a 15% growth in brand awareness, and enhanced customer loyalty."
+    },
+    {
+        "chunk_id": 3,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "Were FinSolve Technologies's marketing initiatives cost-effective?",
+        "ground_truth": "FinSolve Technologies's marketing initiatives proved to be cost-effective, delivering a solid return on investment (ROI) and positioning the company for further expansion."
+    },
+    {
+        "chunk_id": 4,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What was the primary driver of the increase in new customers for FinSolve Technologies?",
+        "ground_truth": "The increase was primarily driven by targeted digital marketing campaigns and improved brand visibility in new international markets (Asia and Europe)."
+    },
+    {
+        "chunk_id": 5,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What is the current focus for improvement in customer engagement?",
+        "ground_truth": "particularly through personalized and AI-driven engagement strategies."
+    },
+    {
+        "chunk_id": 6,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What is the name of the section in the campaign analysis?",
+        "ground_truth": "Campaign Analysis:"
+    },
+    {
+        "chunk_id": 7,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What was the most successful digital campaign in terms of conversions and brand awareness?",
+        "ground_truth": "The 'InstantWire Global Expansion' campaign was the most successful in terms of conversions and brand awareness."
+    },
+    {
+        "chunk_id": 8,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "How much revenue was generated directly attributed to digital ads, influencer partnerships, and sponsored content?",
+        "ground_truth": "These efforts generated $17.5M in revenue directly attributed to them."
+    },
+    {
+        "chunk_id": 9,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What was the estimated return on investment (ROI) from the 'FinSolve Technologies Fintech Innovation' event in Berlin?",
+        "ground_truth": "Estimated 5x ROI from new partnerships and contracts."
+    },
+    {
+        "chunk_id": 10,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What was the return on investment (ROI) of the email marketing campaign?",
+        "ground_truth": "The ROI was 2x, with substantial increases in customer retention."
+    },
+    {
+        "chunk_id": 11,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What types of external vendors did FinSolve Technologies rely on in 2024 to support its marketing efforts?",
+        "ground_truth": "FinSolve Technologies relied on several key external vendors in 2024 to support its marketing efforts. These vendors included digital advertising agencies, PR firms, and event organizers."
+    },
+    {
+        "chunk_id": 12,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What issues did Vendor A face in their collaboration?",
+        "ground_truth": "Vendor A faced issues with timely reporting and budget adherence."
+    },
+    {
+        "chunk_id": 13,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What role should future contracts with Vendor B consider expanding?",
+        "ground_truth": "their role in influencer partnerships"
+    },
+    {
+        "chunk_id": 14,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What contributed to the Marketing Department's success in 2024?",
+        "ground_truth": "its focus on understanding and engaging key customer segments"
+    },
+    {
+        "chunk_id": 15,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What age group showed a strong preference for real-time payments and mobile financial solutions?",
+        "ground_truth": "The majority of new customers in 2024 were young professionals aged 25-35, who showed a strong preference for real-time payments and mobile financial solutions."
+    },
+    {
+        "chunk_id": 16,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What type of content drove the highest levels of engagement on social media?",
+        "ground_truth": "Customers responded well to educational content about financial empowerment and fintech innovation."
+    },
+    {
+        "chunk_id": 17,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What was the total marketing budget allocated in 2024?",
+        "ground_truth": "The total marketing budget was $15M."
+    },
+    {
+        "chunk_id": 18,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What percentage of the budget is allocated to Digital Marketing?",
+        "ground_truth": "Digital Marketing: $7M (47%) \u2013 Focused on paid ads, influencer campaigns, and digital content."
+    },
+    {
+        "chunk_id": 19,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What is the current Customer Acquisition Cost (CAC) per new customer?",
+        "ground_truth": "The current Customer Acquisition Cost (CAC) is $150 per new customer."
+    },
+    {
+        "chunk_id": 20,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What was the Click-Through Rate (CTR) for paid ads in the given year?",
+        "ground_truth": "The Click-Through Rate (CTR) for paid ads was 2.5%."
+    },
+    {
+        "chunk_id": 21,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What geographic region should FinSolve Technologies focus on for untapped markets?",
+        "ground_truth": "Latin America"
+    },
+    {
+        "chunk_id": 22,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What should the marketing team invest more in to drive better results?",
+        "ground_truth": "retaining existing customers through loyalty programs and personalized communication"
+    },
+    {
+        "chunk_id": 23,
+        "department": "marketing",
+        "file_name": "marketing_report_2024.md",
+        "question": "What type of information is included in the appendices?",
+        "ground_truth": "Detailed performance charts and marketing analytics reports are included in the appendices."
+    }
+]

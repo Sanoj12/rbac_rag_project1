@@ -15,7 +15,7 @@ with open("embeddings.json" ,"r" ,encoding="utf-8") as file:
 
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
-INDEX_NAME = "rbac-rag-chat-1"
+INDEX_NAME = "rbac-rag-chat-2"
 
 
 
@@ -70,6 +70,9 @@ def upsert_vectors(index, embeddings, chunks):
         index.upsert(vectors=vectors)
 
         print(f"Uploaded {len(vectors)} vectors successfully")
+        stats = index.describe_index_stats()
+
+        print(stats.namespaces)
 
     except Exception as e:
         print("Error durning upserting vectors:", e)

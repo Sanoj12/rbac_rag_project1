@@ -4,7 +4,7 @@ from docling.document_converter import DocumentConverter
 
 converter = DocumentConverter()
 
-folder = "C:/Users/sanoj/rbac_chatbot/data"
+folder = "C:/Users/sanoj/rbac_rag_project1/Data"
 
 all_docs = []
 
@@ -52,4 +52,4 @@ import json
 with open("data_parsing.json","w",encoding="utf-8") as file:
     json.dump(all_docs,file,indent=2)
 
-    print("json file successfullty saved: {len(all_docs)}") 
+    print(f"json file successfullty saved: {len(all_docs)}") 

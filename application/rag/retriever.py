@@ -50,12 +50,13 @@ def retrieve_answer(query,department):
             "department": department
          }
        )
-
+    print("PINECONE RESULT COUNT:",
+    len(pinecone_results["matches"]))
        ##
     
     ##semantic
 
-
+    print("USER DEPARTMENT:", repr(department))
     results = []
 
     scores = []
