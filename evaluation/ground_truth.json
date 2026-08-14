@@ -1,0 +1,1514 @@
+[
+    {
+        "chunk_id": 0,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "Where is the headquarters of Technologies located?",
+        "ground_truth": "Technologies is headquartered in Bangalore, India."
+    },
+    {
+        "chunk_id": 1,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of this engineering document?",
+        "ground_truth": "This engineering document outlines the technical architecture, development processes, and operational guidelines for FinSolve's product ecosystem."
+    },
+    {
+        "chunk_id": 2,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What topics are covered in this document?",
+        "ground_truth": "This document covers: System architecture and infrastructure, Software development lifecycle (SDLC), Technology stack, Security and compliance frameworks, Testing and quality assurance methodologies, Deployment and DevOps practices, Monitoring and maintenance protocols, and Future technology roadmap."
+    },
+    {
+        "chunk_id": 3,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the date of the initial version of the document?",
+        "ground_truth": "The initial version was created on 2025-05-01."
+    },
+    {
+        "chunk_id": 4,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of system design does FinSolve's architecture use?",
+        "ground_truth": "FinSolve's architecture is a microservices-based, cloud-native system designed for scalability, resilience, and security."
+    },
+    {
+        "chunk_id": 5,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary function of the Redis component in the Data Layer?",
+        "ground_truth": "Redis is used for Caching, Session Management."
+    },
+    {
+        "chunk_id": 6,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the key components of the infrastructure?",
+        "ground_truth": "The key components of the infrastructure are AWS, Kubernetes, and Cloudflare."
+    },
+    {
+        "chunk_id": 7,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used to develop the Web Application?",
+        "ground_truth": "The Web Application is built with React, Redux, and Tailwind CSS."
+    },
+    {
+        "chunk_id": 8,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of APIs are enabled for third-party integrations and partner systems?",
+        "ground_truth": "RESTful and GraphQL APIs are enabled for third-party integrations, partner systems, and future expansions."
+    },
+    {
+        "chunk_id": 9,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary function of the API Gateway?",
+        "ground_truth": "It serves as a centralized entry point for all client requests."
+    },
+    {
+        "chunk_id": 10,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of authentication does the Authentication Service use?",
+        "ground_truth": "The Authentication Service uses OAuth 2.0 and JWT tokens."
+    },
+    {
+        "chunk_id": 11,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of data does the Analytics Service process?",
+        "ground_truth": "The Analytics Service processes user financial data."
+    },
+    {
+        "chunk_id": 12,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of data store is used for caching, session management, and pub/sub messaging between services?",
+        "ground_truth": "Redis is used for caching, session management, and pub/sub messaging between services."
+    },
+    {
+        "chunk_id": 13,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What cloud provider is the primary cloud provider utilizing EC2, ECS, Lambda, RDS, S3, CloudFront, and other managed services?",
+        "ground_truth": "AWS is the primary cloud provider utilizing EC2, ECS, Lambda, RDS, S3, CloudFront, and other managed services."
+    },
+    {
+        "chunk_id": 14,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What enables seamless scaling in the described architecture?",
+        "ground_truth": "Microservices designed to be stateless."
+    },
+    {
+        "chunk_id": 15,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What method does PostgreSQL use for high-volume transactional tables?",
+        "ground_truth": "PostgreSQL uses range-based sharding for high-volume transactional tables."
+    },
+    {
+        "chunk_id": 16,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What caching strategies are used in the system?",
+        "ground_truth": "The system uses a multi-level caching architecture with application-level caching with Redis, API Gateway response caching, CDN caching for static assets, and database query result caching."
+    },
+    {
+        "chunk_id": 17,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used to prevent cascading failures in the system?",
+        "ground_truth": "Implemented using Istio service mesh."
+    },
+    {
+        "chunk_id": 18,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the Recovery Time Objective (RTO) for disaster recovery in this system?",
+        "ground_truth": "The Recovery Time Objective (RTO) is 4 hours."
+    },
+    {
+        "chunk_id": 19,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What pattern is used for distributed transactions across microservices?",
+        "ground_truth": "The Saga pattern is used for distributed transactions across microservices."
+    },
+    {
+        "chunk_id": 20,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used for testing the Backend layer?",
+        "ground_truth": "The technologies used for testing the Backend layer are Jest, Pytest, and Go test."
+    },
+    {
+        "chunk_id": 21,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is an example of a tool used for testing containers in the provided document?",
+        "ground_truth": "TestContainers is an example of a tool used for testing containers in the provided document."
+    },
+    {
+        "chunk_id": 22,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used for security in the provided system?",
+        "ground_truth": "The tools used for security in the provided system are OAuth 2.0, JWT, AWS WAF, Cloudflare, Vault, CertManager, and OPA."
+    },
+    {
+        "chunk_id": 23,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the preferred characteristic of technologies in terms of their establishment?",
+        "ground_truth": "Preference for well-established technologies with active communities."
+    },
+    {
+        "chunk_id": 24,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one of the goals of Cost Efficiency in the given context?",
+        "ground_truth": "Balance between performance and operational costs."
+    },
+    {
+        "chunk_id": 25,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are major versions of dependencies upgraded?",
+        "ground_truth": "Major versions of dependencies are upgraded quarterly."
+    },
+    {
+        "chunk_id": 26,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How long does the Sprint Planning ceremony last?",
+        "ground_truth": "Product owners and engineering leads define sprint goals and prioritize tasks (4 hours)."
+    },
+    {
+        "chunk_id": 27,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary responsibility of the Scrum Master?",
+        "ground_truth": "Facilitates ceremonies, removes impediments, coaches team."
+    },
+    {
+        "chunk_id": 28,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How do product managers create user stories in Jira?",
+        "ground_truth": "Product managers create user stories in Jira following the format: 'As a [user role], I want [feature] so that [benefit].'"
+    },
+    {
+        "chunk_id": 29,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used for creating UI/UX designs in the design phase?",
+        "ground_truth": "UI/UX designs are created in Figma with component-based architecture."
+    },
+    {
+        "chunk_id": 30,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What style guide is enforced for JavaScript/TypeScript code via linters?",
+        "ground_truth": "ESLint with Airbnb configuration is enforced for JavaScript/TypeScript code via linters."
+    },
+    {
+        "chunk_id": 31,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the automated checks that must pass before code review?",
+        "ground_truth": "Automated checks must pass before code review: linting and style validation, unit test coverage (minimum 85%), and no security vulnerabilities (via Snyk)."
+    },
+    {
+        "chunk_id": 32,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the sequence of automated tests in the testing process?",
+        "ground_truth": "Automated tests run in the following sequence: Unit tests, Integration tests, End-to-end tests, and Performance tests."
+    },
+    {
+        "chunk_id": 33,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are production releases scheduled in the deployment pipeline?",
+        "ground_truth": "Scheduled bi-weekly."
+    },
+    {
+        "chunk_id": 34,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the branch strategy used in the Git workflow?",
+        "ground_truth": "The branch strategy used in the Git workflow is Gitflow."
+    },
+    {
+        "chunk_id": 35,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What prefix is used for documentation changes in commit messages?",
+        "ground_truth": "docs:"
+    },
+    {
+        "chunk_id": 36,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the versioning system used for releases?",
+        "ground_truth": "Semantic versioning (MAJOR.MINOR.PATCH) is used for releases."
+    },
+    {
+        "chunk_id": 37,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What methods are used for multi-factor authentication in the system?",
+        "ground_truth": "Multi-factor authentication is via SMS, email, or authenticator apps."
+    },
+    {
+        "chunk_id": 38,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is mentioned as a practice for fine-grained permissions in the source file?",
+        "ground_truth": "Attribute-Based Access Control (ABAC) for fine-grained permissions involves regular permission audits and least-privilege enforcement."
+    },
+    {
+        "chunk_id": 39,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What encryption method is used for data at rest?",
+        "ground_truth": "AES-256 encryption using AWS KMS is used for data at rest."
+    },
+    {
+        "chunk_id": 40,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used as a secondary defense layer in network segmentation?",
+        "ground_truth": "Network ACLs are used as a secondary defense layer."
+    },
+    {
+        "chunk_id": 41,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of the compliance frameworks mentioned in this section?",
+        "ground_truth": "the compliance frameworks"
+    },
+    {
+        "chunk_id": 42,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one of the requirements for Level 1 compliance under the Payment Card Industry Data Security Standard (PCI-DSS)?",
+        "ground_truth": "Regular penetration testing is one of the requirements for Level 1 compliance under the Payment Card Industry Data Security Standard (PCI-DSS)."
+    },
+    {
+        "chunk_id": 43,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one method mentioned for ensuring Level 1 compliance for payment processing?",
+        "ground_truth": "Regular penetration testing is one method mentioned for ensuring Level 1 compliance for payment processing."
+    },
+    {
+        "chunk_id": 44,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of audits are performed for compliance monitoring?",
+        "ground_truth": "Quarterly internal audits, Annual external audits, Automated compliance checks in CI/CD pipeline, and Continuous control monitoring via AWS Config are performed for compliance monitoring."
+    },
+    {
+        "chunk_id": 45,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the remediation timeframe for vulnerabilities classified as High?",
+        "ground_truth": "Remediation within 7 days."
+    },
+    {
+        "chunk_id": 46,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the different levels of incident classification in the incident response process?",
+        "ground_truth": "The incident classification levels are P0: Critical, P1: High, P2: Medium, and P3: Low."
+    },
+    {
+        "chunk_id": 47,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the main steps involved in the incident response process?",
+        "ground_truth": "The main steps involved in the incident response process are Identification and containment, Evidence collection, Remediation and recovery, and Post-incident analysis and lessons learned."
+    },
+    {
+        "chunk_id": 48,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of security training is provided for developers?",
+        "ground_truth": "Role-specific security training for developers."
+    },
+    {
+        "chunk_id": 49,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What percentage of the code base is covered by unit tests?",
+        "ground_truth": "90% of the code base is covered by unit tests."
+    },
+    {
+        "chunk_id": 50,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used to implement End-to-End Tests?",
+        "ground_truth": "Cypress (web) and Appium (mobile) are used to implement End-to-End Tests."
+    },
+    {
+        "chunk_id": 51,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the target for API response time in performance testing?",
+        "ground_truth": "API response time: P95 < 200ms"
+    },
+    {
+        "chunk_id": 52,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of accessibility testing is required for critical components?",
+        "ground_truth": "WCAG 2.1 AA compliance, screen reader compatibility, and keyboard navigation support are required."
+    },
+    {
+        "chunk_id": 53,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How many attempts are made for automatic retry of flaky tests?",
+        "ground_truth": "Automatic retry for flaky tests (maximum 3 attempts)."
+    },
+    {
+        "chunk_id": 54,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the minimum test coverage required by Codecov?",
+        "ground_truth": "Codecov enforces minimum 85% test coverage."
+    },
+    {
+        "chunk_id": 55,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the required fields for logging and tracking defects in Jira?",
+        "ground_truth": "The required fields are steps to reproduce, expected vs. actual results, and environment."
+    },
+    {
+        "chunk_id": 56,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the resolution time for a defect with SLA S3?",
+        "ground_truth": "Resolution within 2 weeks."
+    },
+    {
+        "chunk_id": 57,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What happens when a commit is triggered in the CI/CD pipeline?",
+        "ground_truth": "Every commit triggers code compilation and static analysis, unit and integration tests, security scanning, and code quality checks."
+    },
+    {
+        "chunk_id": 58,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are scheduled deployments made to the Production Environment?",
+        "ground_truth": "Scheduled deployments are made to the Production Environment bi-weekly."
+    },
+    {
+        "chunk_id": 59,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used for build orchestration and deployment monitoring in the described system?",
+        "ground_truth": "Jenkins is used for build orchestration, and Prometheus and Grafana are used for deployment monitoring."
+    },
+    {
+        "chunk_id": 60,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is stored in a Git repository according to the IaC version control process?",
+        "ground_truth": "Infrastructure code"
+    },
+    {
+        "chunk_id": 61,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used for environment-specific configurations in the Kubernetes Resources section?",
+        "ground_truth": "Kustomize is used for environment-specific configurations."
+    },
+    {
+        "chunk_id": 62,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used for image scanning in the Docker Standards?",
+        "ground_truth": "Trivy is used for image scanning in the Docker Standards."
+    },
+    {
+        "chunk_id": 63,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one way to control pod-to-pod communication in Kubernetes?",
+        "ground_truth": "Network policies are used to control pod-to-pod communication."
+    },
+    {
+        "chunk_id": 64,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often is the release schedule?",
+        "ground_truth": "Bi-weekly release schedule."
+    },
+    {
+        "chunk_id": 65,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the process for addressing critical issues in the code?",
+        "ground_truth": "Critical issues are patched directly from `main` and then merged back to the `develop` branch."
+    },
+    {
+        "chunk_id": 66,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of metrics are included in the Infrastructure Metrics category?",
+        "ground_truth": "CPU, memory, disk usage, Network throughput and latency, Container health and resource utilization."
+    },
+    {
+        "chunk_id": 67,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the maximum allowed API latency (P95) according to the Technical KPIs?",
+        "ground_truth": "API latency (P95) must be less than 200ms."
+    },
+    {
+        "chunk_id": 68,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary alert channel for critical incidents?",
+        "ground_truth": "PagerDuty is the primary alert channel for critical incidents, which has a 24/7 response."
+    },
+    {
+        "chunk_id": 69,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the structured logging format used in the ELK Stack?",
+        "ground_truth": "JSON"
+    },
+    {
+        "chunk_id": 70,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the retention policy for logs stored in cold storage?",
+        "ground_truth": "Logs stored in cold storage are retained for 1 year and archived in S3."
+    },
+    {
+        "chunk_id": 71,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are critical security patches applied?",
+        "ground_truth": "Critical security patches are applied within 48 hours."
+    },
+    {
+        "chunk_id": 72,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What percentage of sprint capacity is dedicated to technical debt management?",
+        "ground_truth": "Dedicated 20% of sprint capacity to technical debt."
+    },
+    {
+        "chunk_id": 73,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the goals of the Personalized Financial Insights initiative?",
+        "ground_truth": "Spending pattern recognition, Anomaly detection for fraud prevention, and Budget recommendations based on user behavior."
+    },
+    {
+        "chunk_id": 74,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of transaction verification does the system support?",
+        "ground_truth": "The system supports blockchain-based transaction verification."
+    },
+    {
+        "chunk_id": 75,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of languages does the system support for right-to-left (RTL) language support?",
+        "ground_truth": "Hindi, Spanish, Mandarin, and Arabic."
+    },
+    {
+        "chunk_id": 76,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What geographic regions are targeted for global market expansion?",
+        "ground_truth": "Latin America (Brazil, Mexico), Africa (Nigeria, Kenya), and Southeast Asia (Vietnam, Philippines) are targeted for global market expansion."
+    },
+    {
+        "chunk_id": 77,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is included in the Regulatory Compliance section of the Open Banking Ecosystem?",
+        "ground_truth": "PSD2 and equivalent standards, Strong Customer Authentication (SCA), and Consent management framework are included in the Regulatory Compliance section of the Open Banking Ecosystem."
+    },
+    {
+        "chunk_id": 78,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the cost model for Serverless Architecture?",
+        "ground_truth": "Pay-per-use cost model"
+    },
+    {
+        "chunk_id": 79,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the properties of database transactions?",
+        "ground_truth": "Atomicity, Consistency, Isolation, Durability"
+    },
+    {
+        "chunk_id": 80,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the industry-standard protocol for authorization?",
+        "ground_truth": "OAuth 2.0 is the industry-standard protocol for authorization."
+    },
+    {
+        "chunk_id": 81,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of the document 'PCI-DSS Guidelines'?",
+        "ground_truth": "Payment security compliance"
+    },
+    {
+        "chunk_id": 82,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the response SLA for the Engineering Lead team?",
+        "ground_truth": "The response SLA for the Engineering Lead team is 4 hours."
+    },
+    {
+        "chunk_id": 83,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "When was the document last updated?",
+        "ground_truth": "The document was last updated on May 14, 2025."
+    },
+    {
+        "chunk_id": 0,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the access level required to view this document?",
+        "ground_truth": "Financial Team, C-Level Only"
+    },
+    {
+        "chunk_id": 1,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "Which department has a variance of more than 6%?",
+        "ground_truth": "The Sales and Subscriptions departments have a variance of more than 6%."
+    },
+    {
+        "chunk_id": 2,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the percentage change in the total revenue compared to the previous year?",
+        "ground_truth": "The total revenue increased by +6.2%."
+    },
+    {
+        "chunk_id": 4,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "Which category has the largest variance from its budget?",
+        "ground_truth": "The Technology category has the largest variance from its budget, with a variance of +8.6%."
+    },
+    {
+        "chunk_id": 5,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the percentage change in total expenses compared to the previous year?",
+        "ground_truth": "The total expenses decreased by -1.1% compared to the previous year."
+    },
+    {
+        "chunk_id": 7,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the balance of the Operating Account at Chase Business?",
+        "ground_truth": "The balance of the Operating Account at Chase Business is $1,245,678.90."
+    },
+    {
+        "chunk_id": 0,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the company's policy on remote work?",
+        "ground_truth": "The company has a hybrid policy - minimum 2 days/week in office."
+    },
+    {
+        "chunk_id": 1,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What benefits are available to employees starting from day 1?",
+        "ground_truth": "Medical, Dental, Vision benefits are available to employees starting from day 1."
+    },
+    {
+        "chunk_id": 2,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the email address of the HR manager?",
+        "ground_truth": "Jessica Brown's email address is jessica.b@company.com."
+    },
+    {
+        "chunk_id": 3,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the department of the person with the email jessica.b@company.com?",
+        "ground_truth": "The department of the person with the email jessica.b@company.com is HR."
+    },
+    {
+        "chunk_id": 4,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the location of the Product Knowledge training session on April 17?",
+        "ground_truth": "The Product Knowledge training session on April 17 will be held virtually."
+    },
+    {
+        "chunk_id": 5,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the format of the Technical Skills Workshop?",
+        "ground_truth": "The Technical Skills Workshop is held in the Lab."
+    },
+    {
+        "chunk_id": 0,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "What is the access level required to view this document?",
+        "ground_truth": "HR Team, C-Level Only"
+    },
+    {
+        "chunk_id": 1,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "What is the department of the employee with the ID EMP-1002?",
+        "ground_truth": "The department of the employee with the ID EMP-1002 is Marketing."
+    },
+    {
+        "chunk_id": 2,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "How many employees are currently active in the Engineering department?",
+        "ground_truth": "There is 1 employee currently active in the Engineering department."
+    },
+    {
+        "chunk_id": 3,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "Which employee has used the most total vacation days?",
+        "ground_truth": "Employee EMP-1002 has used the most total vacation days, with 19 days used out of 15 available."
+    },
+    {
+        "chunk_id": 4,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "Which employee has the highest number of used items in the '10 (used)' category?",
+        "ground_truth": "EMP-1005 has the highest number of used items in the '10 (used)' category with 3 used items."
+    },
+    {
+        "chunk_id": 5,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "What is the purpose of the source file?",
+        "ground_truth": "the image"
+    },
+    {
+        "chunk_id": 0,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What is the access level for the document?",
+        "ground_truth": "The access level for the document is Marketing Team, C-Level."
+    },
+    {
+        "chunk_id": 1,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "Which campaign has the highest ROI?",
+        "ground_truth": "The Spring Launch campaign has the highest ROI at 3.2x."
+    },
+    {
+        "chunk_id": 2,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What is the revenue generated from the Partner Webinar event?",
+        "ground_truth": "The revenue generated from the Partner Webinar event is $15,000."
+    },
+    {
+        "chunk_id": 4,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "Which platform has the highest engagement rate?",
+        "ground_truth": "The platform with the highest engagement rate is LinkedIn, with an engagement rate of 4.2%."
+    },
+    {
+        "chunk_id": 5,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What is the purpose of the 'Customer Segment Analysis'?",
+        "ground_truth": "The purpose of the 'Customer Segment Analysis' is to provide a target audience breakdown and engagement patterns."
+    },
+    {
+        "chunk_id": 6,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What percentage of the total target audience is comprised of Small Business?",
+        "ground_truth": "The Small Business segment accounts for 50% of the total target audience."
+    },
+    {
+        "chunk_id": 0,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "Where is FinSolve headquartered?",
+        "ground_truth": "FinSolve is headquartered in Bangalore, India."
+    },
+    {
+        "chunk_id": 1,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of this engineering document?",
+        "ground_truth": "This engineering document outlines the technical architecture, development processes, and operational guidelines for FinSolve's product ecosystem."
+    },
+    {
+        "chunk_id": 2,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What topics are covered in this document?",
+        "ground_truth": "This document covers: System architecture and infrastructure, Software development lifecycle (SDLC), Technology stack, Security and compliance frameworks, Testing and quality assurance methodologies, Deployment and DevOps practices, Monitoring and maintenance protocols, and Future technology roadmap."
+    },
+    {
+        "chunk_id": 3,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the date of the initial version of the document?",
+        "ground_truth": "The initial version was created on 2025-05-01."
+    },
+    {
+        "chunk_id": 4,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of system design does FinSolve's architecture use?",
+        "ground_truth": "FinSolve's architecture is a microservices-based, cloud-native system."
+    },
+    {
+        "chunk_id": 5,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary function of the Redis component in the Data Layer?",
+        "ground_truth": "Redis is used for Caching, Session Management."
+    },
+    {
+        "chunk_id": 6,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the key components of the infrastructure?",
+        "ground_truth": "The key components of the infrastructure are AWS, Kubernetes, and Cloudflare."
+    },
+    {
+        "chunk_id": 7,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used to develop the Web Application?",
+        "ground_truth": "The Web Application is built with React, Redux, and Tailwind CSS."
+    },
+    {
+        "chunk_id": 8,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of APIs are enabled for third-party integrations and partner systems?",
+        "ground_truth": "RESTful and GraphQL APIs are enabled for third-party integrations, partner systems, and future expansions."
+    },
+    {
+        "chunk_id": 9,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary function of the API Gateway?",
+        "ground_truth": "It serves as a centralized entry point for all client requests."
+    },
+    {
+        "chunk_id": 10,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of authentication does the Authentication Service use?",
+        "ground_truth": "The Authentication Service uses OAuth 2.0 and JWT tokens."
+    },
+    {
+        "chunk_id": 11,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of data does the Analytics Service process?",
+        "ground_truth": "The Analytics Service processes user financial data."
+    },
+    {
+        "chunk_id": 12,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of data store is used for caching, session management, and pub/sub messaging between services?",
+        "ground_truth": "Redis is used for caching, session management, and pub/sub messaging between services."
+    },
+    {
+        "chunk_id": 13,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What cloud provider is the primary cloud provider utilizing EC2, ECS, Lambda, RDS, S3, CloudFront, and other managed services?",
+        "ground_truth": "AWS is the primary cloud provider utilizing EC2, ECS, Lambda, RDS, S3, CloudFront, and other managed services."
+    },
+    {
+        "chunk_id": 14,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What enables seamless scaling in the described architecture?",
+        "ground_truth": "Microservices designed to be stateless."
+    },
+    {
+        "chunk_id": 15,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What method does PostgreSQL use for high-volume transactional tables?",
+        "ground_truth": "PostgreSQL uses range-based sharding for high-volume transactional tables."
+    },
+    {
+        "chunk_id": 16,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What caching strategies are used in the system?",
+        "ground_truth": "The system uses a multi-level caching architecture with application-level caching with Redis, API Gateway response caching, CDN caching for static assets, and database query result caching."
+    },
+    {
+        "chunk_id": 17,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used to prevent cascading failures in the system?",
+        "ground_truth": "Implemented using Istio service mesh."
+    },
+    {
+        "chunk_id": 18,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the Recovery Time Objective (RTO) for disaster recovery?",
+        "ground_truth": "The Recovery Time Objective (RTO) is 4 hours."
+    },
+    {
+        "chunk_id": 19,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What pattern is used for distributed transactions across microservices?",
+        "ground_truth": "The Saga pattern is used for distributed transactions across microservices."
+    },
+    {
+        "chunk_id": 20,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What technologies are used for testing the Backend layer?",
+        "ground_truth": "Jest, Pytest, Go test are used for testing the Backend layer."
+    },
+    {
+        "chunk_id": 21,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is an example of a tool used for testing containers in the provided document?",
+        "ground_truth": "TestContainers is an example of a tool used for testing containers."
+    },
+    {
+        "chunk_id": 22,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are listed under the 'Security' category?",
+        "ground_truth": "OAuth 2.0, JWT, AWS WAF, Cloudflare, Vault, CertManager, OPA, OWASP ZAP, Snyk are listed under the 'Security' category."
+    },
+    {
+        "chunk_id": 23,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the preferred characteristic of technologies in terms of their establishment?",
+        "ground_truth": "Preference for well-established technologies with active communities."
+    },
+    {
+        "chunk_id": 24,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one of the goals of Cost Efficiency?",
+        "ground_truth": "Balance between performance and operational costs."
+    },
+    {
+        "chunk_id": 25,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are major versions of dependencies upgraded?",
+        "ground_truth": "Major versions of dependencies are upgraded quarterly."
+    },
+    {
+        "chunk_id": 26,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How long does the Sprint Planning ceremony last?",
+        "ground_truth": "Product owners and engineering leads define sprint goals and prioritize tasks (4 hours)."
+    },
+    {
+        "chunk_id": 27,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary responsibility of the Scrum Master in a Scrum team?",
+        "ground_truth": "The Scrum Master facilitates ceremonies, removes impediments, and coaches the team."
+    },
+    {
+        "chunk_id": 28,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How do product managers create user stories in Jira?",
+        "ground_truth": "Product managers create user stories in Jira following the format: 'As a [user role], I want [feature] so that [benefit].'"
+    },
+    {
+        "chunk_id": 29,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used for creating UI/UX designs in the design phase?",
+        "ground_truth": "UI/UX designs are created in Figma with component-based architecture."
+    },
+    {
+        "chunk_id": 30,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What style guide is enforced for JavaScript/TypeScript code via linters?",
+        "ground_truth": "ESLint with Airbnb configuration is enforced for JavaScript/TypeScript code via linters."
+    },
+    {
+        "chunk_id": 31,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the minimum requirements for automated checks before code review?",
+        "ground_truth": "Automated checks must pass before code review: linting and style validation, unit test coverage (minimum 85%), and no security vulnerabilities (via Snyk)."
+    },
+    {
+        "chunk_id": 32,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the sequence of automated tests in the testing process?",
+        "ground_truth": "Automated tests run in the following sequence: Unit tests, Integration tests, End-to-end tests, Performance tests."
+    },
+    {
+        "chunk_id": 33,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are production releases scheduled?",
+        "ground_truth": "Scheduled bi-weekly."
+    },
+    {
+        "chunk_id": 34,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the branch strategy used in the Git workflow?",
+        "ground_truth": "The branch strategy used in the Git workflow is Gitflow."
+    },
+    {
+        "chunk_id": 35,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What prefix is used for documentation changes in commit messages?",
+        "ground_truth": "docs:"
+    },
+    {
+        "chunk_id": 36,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the versioning system used for releases?",
+        "ground_truth": "Semantic versioning (MAJOR.MINOR.PATCH) is used for releases."
+    },
+    {
+        "chunk_id": 37,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What methods are used for multi-factor authentication in the system?",
+        "ground_truth": "Multi-factor authentication is via SMS, email, or authenticator apps."
+    },
+    {
+        "chunk_id": 38,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is mentioned as a practice for fine-grained permissions in the source file?",
+        "ground_truth": "Attribute-Based Access Control (ABAC) for fine-grained permissions involves regular permission audits and least-privilege enforcement."
+    },
+    {
+        "chunk_id": 39,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What encryption method is used for data at rest?",
+        "ground_truth": "AES-256 encryption using AWS KMS is used for data at rest."
+    },
+    {
+        "chunk_id": 40,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used as a secondary defense layer in network segmentation?",
+        "ground_truth": "Network ACLs are used as a secondary defense layer."
+    },
+    {
+        "chunk_id": 41,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of the compliance frameworks mentioned in this section?",
+        "ground_truth": "the compliance frameworks"
+    },
+    {
+        "chunk_id": 42,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one of the requirements for Level 1 compliance under the Payment Card Industry Data Security Standard (PCI-DSS)?",
+        "ground_truth": "Regular penetration testing is one of the requirements for Level 1 compliance under the Payment Card Industry Data Security Standard (PCI-DSS)."
+    },
+    {
+        "chunk_id": 43,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is one method mentioned for ensuring Level 1 compliance for payment processing?",
+        "ground_truth": "Regular penetration testing is one method mentioned for ensuring Level 1 compliance for payment processing."
+    },
+    {
+        "chunk_id": 44,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of audits are performed for compliance monitoring?",
+        "ground_truth": "Quarterly internal audits and Annual external audits are performed for compliance monitoring."
+    },
+    {
+        "chunk_id": 45,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the remediation timeframe for vulnerabilities classified as High?",
+        "ground_truth": "Remediation within 7 days."
+    },
+    {
+        "chunk_id": 46,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary purpose of the Identification and containment step in the Response Procedure?",
+        "ground_truth": "The primary purpose of the Identification and containment step in the Response Procedure is to identify and contain the incident."
+    },
+    {
+        "chunk_id": 47,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the main steps involved in the incident management process?",
+        "ground_truth": "The main steps involved in the incident management process are Identification and containment, Evidence collection, Remediation and recovery, and Post-incident analysis and lessons learned."
+    },
+    {
+        "chunk_id": 48,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of security training is provided for developers and administrators?",
+        "ground_truth": "Role-specific security training is provided for developers and administrators."
+    },
+    {
+        "chunk_id": 49,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What percentage of the code base is covered by unit tests?",
+        "ground_truth": "90% of the code base is covered by unit tests."
+    },
+    {
+        "chunk_id": 50,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What tools are used to implement End-to-End Tests?",
+        "ground_truth": "Cypress (web) and Appium (mobile) are used to implement End-to-End Tests."
+    },
+    {
+        "chunk_id": 51,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the target for API response time in performance testing?",
+        "ground_truth": "API response time: P95 < 200ms"
+    },
+    {
+        "chunk_id": 52,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What type of accessibility testing is required for critical components?",
+        "ground_truth": "WCAG 2.1 AA compliance, screen reader compatibility, and keyboard navigation support are required."
+    },
+    {
+        "chunk_id": 53,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How many attempts are made for automatic retry of flaky tests?",
+        "ground_truth": "Automatic retry for flaky tests (maximum 3 attempts)."
+    },
+    {
+        "chunk_id": 54,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the minimum test coverage required by Codecov?",
+        "ground_truth": "Codecov enforces minimum 85% test coverage."
+    },
+    {
+        "chunk_id": 55,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the required fields for logging and tracking defects in Jira?",
+        "ground_truth": "The required fields are steps to reproduce, expected vs. actual results, and environment."
+    },
+    {
+        "chunk_id": 56,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the resolution time for a defect with SLA S3?",
+        "ground_truth": "Resolution within 2 weeks."
+    },
+    {
+        "chunk_id": 57,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What happens when a commit is triggered in the CI/CD pipeline?",
+        "ground_truth": "Every commit triggers code compilation and static analysis, unit and integration tests, security scanning, and code quality checks."
+    },
+    {
+        "chunk_id": 58,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are scheduled deployments performed in the Production Environment?",
+        "ground_truth": "Scheduled deployments are performed bi-weekly in the Production Environment."
+    },
+    {
+        "chunk_id": 59,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What pipeline technologies are used in this system?",
+        "ground_truth": "Jenkins for build orchestration, ArgoCD for GitOps-based deployment, Nexus Repository for artifact storage, and Prometheus and Grafana for deployment monitoring."
+    },
+    {
+        "chunk_id": 60,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is stored in a Git repository according to the IaC version control process?",
+        "ground_truth": "Infrastructure code"
+    },
+    {
+        "chunk_id": 61,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used for environment-specific configurations in the Kubernetes Resources section?",
+        "ground_truth": "Kustomize is used for environment-specific configurations."
+    },
+    {
+        "chunk_id": 62,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used for image scanning in Docker?",
+        "ground_truth": "Trivy is used for image scanning in Docker."
+    },
+    {
+        "chunk_id": 63,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is used to control pod-to-pod communication in Kubernetes?",
+        "ground_truth": "Network policies are used to control pod-to-pod communication."
+    },
+    {
+        "chunk_id": 64,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the frequency of the release schedule?",
+        "ground_truth": "Bi-weekly release schedule."
+    },
+    {
+        "chunk_id": 65,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the testing process for critical issues patched directly from `main`?",
+        "ground_truth": "Abbreviated testing focused on the specific issue."
+    },
+    {
+        "chunk_id": 66,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of metrics are included in the Infrastructure Metrics category?",
+        "ground_truth": "CPU, memory, disk usage, Network throughput and latency, Container health and resource utilization."
+    },
+    {
+        "chunk_id": 67,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the maximum allowed API latency (P95) according to the Technical KPIs?",
+        "ground_truth": "P95 < 200ms"
+    },
+    {
+        "chunk_id": 68,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the primary alert channel for critical incidents?",
+        "ground_truth": "PagerDuty is the primary alert channel for critical incidents."
+    },
+    {
+        "chunk_id": 69,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the structured logging format used in the ELK Stack?",
+        "ground_truth": "JSON"
+    },
+    {
+        "chunk_id": 70,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the retention policy for logs stored in warm storage?",
+        "ground_truth": "Logs stored in warm storage are retained for 90 days in aggregated form."
+    },
+    {
+        "chunk_id": 71,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "How often are critical security patches applied?",
+        "ground_truth": "Critical security patches are applied within 48 hours."
+    },
+    {
+        "chunk_id": 72,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What percentage of sprint capacity is dedicated to technical debt management?",
+        "ground_truth": "Dedicated 20% of sprint capacity to technical debt."
+    },
+    {
+        "chunk_id": 73,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the goals of the Personalized Financial Insights initiative?",
+        "ground_truth": "The goals of the Personalized Financial Insights initiative are spending pattern recognition, anomaly detection for fraud prevention, and budget recommendations based on user behavior."
+    },
+    {
+        "chunk_id": 74,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of transaction verification does the system support?",
+        "ground_truth": "The system supports blockchain-based transaction verification."
+    },
+    {
+        "chunk_id": 75,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What types of languages does the system support?",
+        "ground_truth": "The system supports Hindi, Spanish, Mandarin, and Arabic."
+    },
+    {
+        "chunk_id": 76,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What geographic regions are targeted for global market expansion?",
+        "ground_truth": "Latin America (Brazil, Mexico), Africa (Nigeria, Kenya), and Southeast Asia (Vietnam, Philippines) are targeted for global market expansion."
+    },
+    {
+        "chunk_id": 77,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is included in the Regulatory Compliance section of the Open Banking Ecosystem?",
+        "ground_truth": "PSD2 and equivalent standards, Strong Customer Authentication (SCA), and Consent management framework are included in the Regulatory Compliance section of the Open Banking Ecosystem."
+    },
+    {
+        "chunk_id": 78,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the cost model for Serverless Architecture?",
+        "ground_truth": "Pay-per-use cost model"
+    },
+    {
+        "chunk_id": 79,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What are the properties of database transactions?",
+        "ground_truth": "Atomicity, Consistency, Isolation, Durability"
+    },
+    {
+        "chunk_id": 80,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the architectural style for distributed systems mentioned in the source file?",
+        "ground_truth": "Representational State Transfer - architectural style for distributed systems"
+    },
+    {
+        "chunk_id": 81,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the purpose of the document 'PCI-DSS Guidelines'?",
+        "ground_truth": "Payment security compliance"
+    },
+    {
+        "chunk_id": 82,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "What is the response SLA for the Engineering Lead team?",
+        "ground_truth": "The response SLA for the Engineering Lead team is 4 hours."
+    },
+    {
+        "chunk_id": 83,
+        "department": "engineering",
+        "file_name": "engineering_master_doc.md",
+        "question": "When was the document last updated?",
+        "ground_truth": "The document was last updated on May 14, 2025."
+    },
+    {
+        "chunk_id": 0,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the access level required to view this document?",
+        "ground_truth": "Financial Team, C-Level Only"
+    },
+    {
+        "chunk_id": 1,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "Which department's Q1 revenue exceeded its target?",
+        "ground_truth": "The Sales department's Q1 revenue exceeded its target."
+    },
+    {
+        "chunk_id": 2,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the percentage change in the total revenue compared to the previous year?",
+        "ground_truth": "The total revenue increased by +6.2%."
+    },
+    {
+        "chunk_id": 4,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "Which category has the largest variance from its budget?",
+        "ground_truth": "The Technology category has the largest variance from its budget, with a variance of +8.6%."
+    },
+    {
+        "chunk_id": 5,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the percentage change in total expenses from the previous year?",
+        "ground_truth": "The total expenses decreased by -1.1%."
+    },
+    {
+        "chunk_id": 7,
+        "department": "finance",
+        "file_name": "financial_team_data.pdf",
+        "question": "What is the balance of the Operating Account at Chase Business?",
+        "ground_truth": "The balance of the Operating Account at Chase Business is $1,245,678.90."
+    },
+    {
+        "chunk_id": 0,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the company's policy on remote work?",
+        "ground_truth": "The company has a hybrid policy - minimum 2 days/week in office."
+    },
+    {
+        "chunk_id": 1,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What benefits are available to employees starting from day 1?",
+        "ground_truth": "Medical, Dental, Vision benefits are available to employees starting from day 1."
+    },
+    {
+        "chunk_id": 2,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the email address of the HR manager?",
+        "ground_truth": "Jessica Brown's email address is jessica.b@company.com."
+    },
+    {
+        "chunk_id": 3,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the department of the employee with the email address jessica.b@company.com?",
+        "ground_truth": "The department of the employee with the email address jessica.b@company.com is HR."
+    },
+    {
+        "chunk_id": 4,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the location of the Cybersecurity Awareness training on April 10?",
+        "ground_truth": "The Cybersecurity Awareness training on April 10 will be held in Conf Room A."
+    },
+    {
+        "chunk_id": 5,
+        "department": "general",
+        "file_name": "employee_handbook.pdf",
+        "question": "What is the location of the Technical Skills Workshop on May 8?",
+        "ground_truth": "The Technical Skills Workshop on May 8 is held in the Lab."
+    },
+    {
+        "chunk_id": 0,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "What is the access level required to view this document?",
+        "ground_truth": "HR Team, C-Level Only"
+    },
+    {
+        "chunk_id": 1,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "What is the department of the employee with the ID EMP-1002?",
+        "ground_truth": "The department of the employee with the ID EMP-1002 is Marketing."
+    },
+    {
+        "chunk_id": 2,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "How many employees are currently active in the company?",
+        "ground_truth": "There are 4 employees currently active in the company."
+    },
+    {
+        "chunk_id": 3,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "Which employee has used the most total vacation days?",
+        "ground_truth": "Employee EMP-1002 has used the most total vacation days, with 19 days used out of 15 available."
+    },
+    {
+        "chunk_id": 4,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "Which employee has been using the most equipment of type 15?",
+        "ground_truth": "EMP-1005 has been using the most equipment of type 15."
+    },
+    {
+        "chunk_id": 5,
+        "department": "hr team",
+        "file_name": "hr_team_data.pdf",
+        "question": "What is the purpose of the provided source file?",
+        "ground_truth": "the image"
+    },
+    {
+        "chunk_id": 0,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What is the access level for the document?",
+        "ground_truth": "The access level for the document is Marketing Team, C-Level."
+    },
+    {
+        "chunk_id": 1,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "Which campaign has the highest ROI?",
+        "ground_truth": "The Spring Launch campaign has the highest ROI at 3.2x."
+    },
+    {
+        "chunk_id": 2,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What is the revenue generated from the Partner Webinar event?",
+        "ground_truth": "The revenue generated from the Partner Webinar event is $15,000."
+    },
+    {
+        "chunk_id": 4,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "Which platform has the highest engagement rate?",
+        "ground_truth": "The platform with the highest engagement rate is LinkedIn, with an engagement rate of 4.2%."
+    },
+    {
+        "chunk_id": 5,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What is the purpose of the 'Customer Segment Analysis'?",
+        "ground_truth": "The purpose of the 'Customer Segment Analysis' is to provide a breakdown and engagement patterns of the target audience."
+    },
+    {
+        "chunk_id": 6,
+        "department": "marketing",
+        "file_name": "marketing_team_data.pdf",
+        "question": "What percentage of the total target audience is comprised of Small Business?",
+        "ground_truth": "The Small Business segment accounts for 50% of the total target audience."
+    }
+]

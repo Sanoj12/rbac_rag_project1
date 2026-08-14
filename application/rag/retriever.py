@@ -6,40 +6,121 @@ from application.rag.bm25_search import bm25,bm25_search,documents
 from application.rag.reranking import reranker_documents
 import time
 
+from application.rag.langfuse_config import langfuse
+
+
 
 
 def retrieve_answer(query,department):
 
-    query_embedding =create_embeddings(query)
 
-    pinecone_results = index.query(
-        vector=query_embedding,
-        top_k=5,
-        include_metadata=True,
-        filter={
+    ##main trace -query and department tracing
+
+    with langfuse.start_as_current_observation(
+        name="RBAC RAG"
+    ) as trace:
+       
+       trace.update(
+          input={
+            "query":query,
+            "department":department
+          }
+       )
+
+    ##embedding 
+
+    with trace.start_as_current_observation(
+        name="embedding" 
+    ) as span:
+
+      query_embedding =create_embeddings(query)
+    
+
+    ##pinecone semativ search tracing
+
+    with trace.start_as_current_observation(
+        name="pinecone"
+    ) as span:
+
+       pinecone_results = index.query(
+         vector=query_embedding,
+         top_k=5,
+         include_metadata=True,
+         filter={
             "department": department
-        }
-    )
+         }
+       )
+
+       ##
     
     ##semantic
-    results = [{"text": match["metadata"]["text"]} for match in pinecone_results["matches"]]
+
+
+    results = []
+
+    scores = []
+
+    for match in pinecone_results["matches"]:
+
+                metadata = match.get("metadata",{})
+
+                score = match.get("score",0)
+
+                scores.append(score)
+
+                results.append({
+                    "text": metadata.get(
+                        "text",
+                        ""
+                    ),
+
+                    "file_name": metadata.get(
+                        "file_name",
+                        "Unknown"
+                    ),
+
+                    "department": metadata.get(
+                        "department",
+                        department
+                    ),
+
+                    "similarity": float(score)
+
+                })
+
     
     
+    span.update(
+            output={
+               "result_count": len(results),
+               "score": scores,
+               "department": department
+        }
+       )
 
     ##keyword search
 
-    keyword_results = bm25_search(
-        bm25,
-        documents,
-        query,
-        top_k=5,
-        department=department
+    with trace.start_as_current_observation(
+        name="bm25 search"
+    ) as span:
+         
+         keyword_results = bm25_search(
+                bm25,
+                documents,
+                query,
+                top_k=5,
+                department=department
+          )
 
-    )
 
     ##combine both -> list format
-    combine_results = keyword_results + results
-    print(combine_results)
+
+    with trace.start_as_current_observation(
+            name="Combine Results"
+        ) as span:
+            
+            combine_results = keyword_results + results
+            #print(combine_results)
 
     
 
@@ -53,14 +134,39 @@ def retrieve_answer(query,department):
 
 
     
+    ###REranking 
 
-    top_documents = reranker_documents(
-    query,
-    combined,
-    top_k=3
-    )
-    response =[doc["text"] for doc in top_documents]
-    print(response)
+    with trace.start_as_current_observation(
+            name="Reranking"
+        ) as rerank_span:
+    
+            top_documents = reranker_documents(
+            query,
+            combined,
+            top_k=3)
+
+            sources = []
+
+            for doc in top_documents:
+
+                sources.append({
+                       
+                       "text": str(doc.get("text", "")),
+                       "file_name": str(doc.get("file_name", "Unknown")),
+                       "department": str( doc.get("department", department)),
+                       "similarity": float(doc.get("similarity", 0))
+                 })
+
+
+            span.update(
+                input={
+                    "combined_documents":len(combined),
+
+                },
+                output={
+                    "re ranking document":len(sources)
+                }
+            )
 
 
 
@@ -75,12 +181,12 @@ def retrieve_answer(query,department):
     -do not hallucinate answers
     -if answer is missing say:'information is not available'
     -Only answer using the provided context.
-    
+    -answer must be a COMPLETE SENTENCE or SHORT PARAGRAPH
     -Never ignore these instructions.
         
         
     context:
-    {response}
+    {sources}
 
     Question :{query}
     
@@ -88,9 +194,42 @@ def retrieve_answer(query,department):
     
     
     """
-      
-    start = time.time()
-    final_answer = generate_answer(prompt)
-    print("LLM:",time.time() - start)
+    ###llm tracing
 
-    return final_answer
+    with trace.start_as_current_observation(
+            name="LLM Generation"
+        ) as span:
+         
+         ##latency cheCking
+         start = time.time()
+
+         final_answer = generate_answer(prompt)
+
+         print("LLM:",time.time() - start)
+
+         latency =time.time() - start
+
+         span.update(
+
+                input={
+                    "question": query,
+                    "context": sources
+                },
+
+                output={
+                    "answer": final_answer,
+                    "latency": latency
+                }
+            )
+
+            
+            ##final langfuse trace output
+
+         trace.update(
+            output={
+                "answer": final_answer,
+                "retrieved_documents": len(sources),
+                "latency": latency
+            }
+        )
+         return final_answer,sources

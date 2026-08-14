@@ -1,139 +1,24 @@
-Installation
-1. Install uv
-curl -Ls https://astral.sh/uv/install.sh | sh
 
-or
-
-pip install uv
-2. Clone the repository
-git clone https://github.com/your-username/project-name.git
-cd project-name
-3. Create virtual environment
-uv venv
-
-Activate it:
-
-Linux / Mac
-
-source .venv/bin/activate
-
-Windows
-
-.venv\Scripts\activate
-4. Install dependencies
-
-Using requirements file:
-
-uv pip install -r requirements.txt
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6bb0447 (Update README.md)
-Title:Role Based Access Control System(RBAC) RAG Chatbot
+Title:   RBAC RAG Chatbot
 
 ##A secure Role-Baesd Access Control(RBAC) Chatbot built using  Retrieval-Augmented Generation (RAG).The system autenticates users enforces role-based permissions,retreive authorized documents,and generate context-aware response using LLMs.
 
+Overview
 
-Features
+This project combines RAG + RBAC to create a secure AI-powered question-answering system
 
--JWT Autentication
--Bcrypt Password Hashing
--SQLAlchemy ORM
--RBAC
--RAG
--Vector Search with Pinecone
--Docling for PDF and text parsing
--langchain
--REST APIs using FastAPI
--Dockerized Deployment
--CI/CD with GitHub Actions
-
-
-
-## tech stack
-
-1.Backend:
--Python
--FastAPI
-
-2.AI/ML:
--Langchain
--Document Parsing-> Docling
--VectorDB -> Pinecone
--Embeddings -> Sentence Transformer
--LLM -> Ollama(llama)
-
-3.Database
--Sqlite
--SQLAlchemy
-
-
-
-4.DevOps
-
--Docker
--CI/CD Tool -> Github Actions
-
-
-## User Authenication flow
-
-
-User Login  ->   Verify Password using Bcrypt ->  Generate JWT Token ->   Return Token to user -> User sends JWT in api requestss -> server verifies jwt  -> Access granted/Access denied
-
-
-
-
-### RBAC WORKFLOW
-
-
-
-<<<<<<< HEAD
-=======
-
-# ** Role-Based Access Control (RBAC) RAG Chatbot**
-
-A secure **Role-Based Access Control (RBAC)** chatbot built using **Retrieval-Augmented Generation (RAG)**. The system authenticates users, enforces role-based permissions, retrieves authorized documents, and generates context-aware responses using Large Language Models (LLMs).
-
-## Features
-
-* JWT Authentication
-* Bcrypt Password Hashing
-* SQLAlchemy ORM
-* Role-Based Access Control (RBAC)
-* Retrieval-Augmented Generation (RAG)
-* Vector Search with Pinecone
-* Docling for PDF and Text Parsing
-* LangChain Integration
-* REST APIs using FastAPI
-* Dockerized Deployment
-* CI/CD with GitHub Actions
-
-## 🛠️ Tech Stack
-
-### Backend
-
-* Python
-* FastAPI
-
-### AI/ML
-
-* LangChain
-* Document Parsing → Docling
-* Vector Database → Pinecone
-* Embeddings → Sentence Transformers
-* LLM → Ollama (Llama)
-
-### Database
-
-* SQLite
-* SQLAlchemy
-
-### DevOps
-
-* Docker
-* GitHub Actions (CI/CD)
+The application:
+ 
+ 1.Authenticates the user with JWT
+ 2.identifies the users department
+ 3.Load documents and Converts documents into smaller chunks.
+ 4.Generates embedding for document chunks
+ 5.Stores embeddings in pinecone
+ 6.Retrieves relevant documents using semantic search.
+ 7.Performs keyword search using BM25.
+ 8.Combines semantic search + keyword search and reranking retrieved documents.
+ 9.Sends relevant context to the LLM.
+ 10.Generates an answer based only on the retrieved documents.
 
 ## 🔐 User Authentication Flow
 
@@ -141,7 +26,7 @@ A secure **Role-Based Access Control (RBAC)** chatbot built using **Retrieval-Au
 User Login
     │
     ▼
-Verify Password (Bcrypt)
+Verify Email & Password (Bcrypt)
     │
     ▼
 Generate JWT Token
@@ -150,10 +35,10 @@ Generate JWT Token
 Return Token to User
     │
     ▼
-User Sends JWT in API Requests
+User Sends JWT with API Requests
     │
     ▼
-Server Verifies JWT
+Server Verifies JWT token
     │
     ▼
 Access Granted / Access Denied
@@ -161,104 +46,130 @@ Access Granted / Access Denied
 
 ## 🏢 RBAC Workflow
 
-```text
->>>>>>> 73d8aaa533aa71306766d4623e25011a291b7dc9
-=======
->>>>>>> 6bb0447 (Update README.md)
-                    User Login
-                         │
-                         ▼
-                JWT Authentication
-                         │
-                         ▼
-<<<<<<< HEAD
-<<<<<<< HEAD
-                Extract User based on department
-=======
-          Extract User Department
->>>>>>> 73d8aaa533aa71306766d4623e25011a291b7dc9
-=======
-                Extract User based on department
->>>>>>> 6bb0447 (Update README.md)
-                         │
-        ┌────────────────┼────────────────┐
-        │                │                │
-        ▼                ▼                ▼
-    Finance          Engineering         HR
-        │                │                │
-        ▼                ▼                ▼
-Financial Docs    Technical Docs    Employee Docs
+User Login(Email & Password)
+    ↓
+JWT Authentication
+    ↓
+Identify User & Department
+    ↓
+Department-Based Access
+    ↓
+├── Finance → Finance Documents
+├── HR → HR Documents
+├── Marketing → Marketing Documents
+├── Engineering → Engineering Documents
+└── General → General Documents
+    ↓
+User Query
+    ↓
+Query Embedding
+    ↓
+Pinecone Vector Database Semantic Search(department filtering)
+    ↓
+BM25 Keyword Search
+    ↓
+Combine semantic search + keyword search
+    ↓
+Re-Ranking
+    ↓
+Remove Duplicates
+    ↓
+Top Relevant Documents
+    ↓
+send Relevant Context
+    ↓
+Groq LLM
+    ↓
+Generate Response
+    ↓
+Display Response to User(Streamlit)
+                    
 
-                         │
-                         ▼
-                     Marketing
-                         │
-                         ▼
-                 Marketing Docs
-
-                         │
-                         ▼
-              Query Pinecone Vector DB
-                         │
-                         ▼
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6bb0447 (Update README.md)
-              Filter Documents by department
-                         │
-                         ▼
-              Send Context to LLM(Ollama)
-                         │
-                         ▼
-                 Generate Response
+Features
+  1. JWT authentication
+  2. Role-Based Access Control
+  3. Department-based document filtering
+  4. PDF and Markdown document processing
+  5. Document chunking
+  6. Text embeddings
+  7. Semantic search
+  8. BM25 keyword search
+  9.Document reranking
+ 10.LLM-based answer generation
+ 11.Retrieval-Augmented Generation
+ 12.Langfuse observability
+ 13.Docker support
+ 14.GitHub Actions CI/CD
 
 
+ Techologies Used       
 
-## key
-
-- Implemented secure JWT-based authentication and authorization.
-<<<<<<< HEAD
-=======
-           Filter Documents by Department
-                         │
-                         ▼
-             Send Context to LLM (Ollama)
-                         │
-                         ▼
-                 Generate Response
-```
-
-## Key 
-
--Implemented secure JWT-based authentication and authorization.
->>>>>>> 73d8aaa533aa71306766d4623e25011a291b7dc9
-=======
->>>>>>> 6bb0447 (Update README.md)
-- Designed department-level document access using RBAC.
-- Built a Retrieval-Augmented Generation (RAG) pipeline using LangChain and Pinecone.
-- Integrated Docling for PDF document parsing and ingestion.
-- Developed RESTful APIs using FastAPI and SQLAlchemy.
-- Containerized the application using Docker.
-- Automated build and deployment pipelines using GitHub Actions.
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6bb0447 (Update README.md)
+| Category                 | Technology                        |
+| ------------------------ | --------------------------------- |
+| **Programming Language** | Python                            |
+| **Backend**              | FastAPI                           |
+| **Frontend**             | Streamlit                         |
+| **Authentication**       | JWT                               |
+| **Password Hashing**     | Bcrypt                            |
+| **Database**             | SQLite                            |
+| **ORM**                  | SQLAlchemy                        |
+| **Vector Database**      | Pinecone                          |
+| **Embeddings**           | Sentence Transformers             |
+| **Semantic Search**      | Pinecone Vector Search            |
+| **Keyword Search**       | BM25                              |
+| **Hybrid Retrieval**     | Pinecone + BM25                   |
+| **Re-Ranking**           | Cross-Encoder                     |
+| **LLM**                  | Groq                              |
+| **Document Processing**  | Docling                           |
+| **Text Chunking**        | RecursiveCharacterTextSplitter    |
+| **Observability**        | Langfuse                          |
+| **Containerization**     | Docker                            |
+| **Version Control**      | Git / GitHub                      |
 
 
 
-## run application
+
+Installation
+
+1. Clone the repository
+git clone https://github.com/Sanoj12/rbac-rag-chatbot1.git
+
+cd rbac-rag-chatbot1
+
+2. Create virtual environment
+uv venv
+
+3. Activate environment
+
+Windows:
+.venv\Scripts\activate
+
+4. Install dependencies
+uv pip install -r requirements.txt
 
 
-uvicorn application.main:app --reload 
+Environment Variables
+
+Create a .env file:
+
+PINECONE_API_KEY=
+GROQ_API_KEY=
+JWT_SECRET_KEY
+LANGFUSE_SECRET_KEY=y
+LANGFUSE_PUBLIC_KEY=
+LANGFUSE_HOST=
+
+Never upload .env or API keys to GitHub.
+
+Add this to .gitignore:
+
+.env
+.venv/
+__pycache__/
+*.pyc
 
 
 
-streamlit run app.py
-<<<<<<< HEAD
-=======
 ##  Run Application
 
 - Start FastAPI Server
@@ -272,6 +183,3 @@ streamlit run app.py
 ```bash
 streamlit run app.py
 ```
->>>>>>> 73d8aaa533aa71306766d4623e25011a291b7dc9
-=======
->>>>>>> 6bb0447 (Update README.md)

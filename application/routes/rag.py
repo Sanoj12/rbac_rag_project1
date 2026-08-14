@@ -30,14 +30,16 @@ def ask_questions(data: QueryRequest, credentials=Depends(security)):
         token = credentials.credentials
         user = get_user(token)
 
-        answer = retrieve_answer(
+        answer ,sources= retrieve_answer(
             query=data.query,
             department=user["department"]
+
         )
 
         return {
             "answer": answer,
-            "department": user["department"]
+            "department": user["department"],
+            "sources": sources
         }
 
     except Exception as e:
