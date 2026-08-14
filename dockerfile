@@ -1,3 +1,6 @@
+
+
+
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -8,6 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 8501
+EXPOSE 8000
 
-CMD ["sh", "-c", "streamlit run app.py --server.address=0.0.0.0 --server.port=${PORT:-8501}"]
+CMD ["uvicorn", "application.main:app", "--host", "0.0.0.0", "--port", "8000"]
