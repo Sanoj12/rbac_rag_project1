@@ -28,7 +28,8 @@ jobs:
 
       - name: Check Python Syntax
         run: |
-          python -m py_compile app.py
+           python -m py_compile main.py
+           python -m py_compile frontend/app.py
 
   docker-build-and-push:
     needs: build_and_test
