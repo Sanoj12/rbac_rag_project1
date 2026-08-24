@@ -1,4 +1,6 @@
-RBAC RAG Chatbot — Frontend
+
+
+###### RBAC RAG Chatbot — Frontend
 
 A department-based document Question & Answer chatbot frontend built using Next.js, React, and TypeScript.
 
@@ -30,6 +32,8 @@ Chat History
 Loading State
 Error Handling
 Logout
+
+
 🛠️ Technologies Used
 Frontend
 Next.js
@@ -45,11 +49,7 @@ Backend Communication
 REST APIs
 Fetch API
 FastAPI
-RAG
-Retrieval-Augmented Generation (RAG)
-Department-based document filtering
-📄 Pages
-🔐 Login Page
+
 
 File:
 
@@ -59,6 +59,8 @@ app/login/page.tsx
 The login page allows users to authenticate using their email and password.
 
 Login Workflow
+
+```text
 User
   ↓
 Login Page
@@ -94,6 +96,7 @@ Display Error             Return JWT + User Info
                               Redirect
                                  ↓
                          Chat / Admin Page
+```
 
 💬 Chat Page
 
@@ -104,7 +107,10 @@ app/chat/page.tsx
 
 The chat page allows authenticated users to ask questions from documents they are authorized to access.
 
+
 Chat Workflow
+
+```text
 User
   ↓
 Login
@@ -122,55 +128,58 @@ sendQuestion()
 Check Question
   ↓
 Is Question Empty?
- ┌───────────────┴───────────────┐
- │                               │
-YES                              NO
- ↓                               ↓
-Display Error              Get JWT from
-Stop                        localStorage
-                                 ↓
-                           Does JWT Exist?
-                         ┌───────┴───────┐
-                         │               │
-                        NO              YES
-                         ↓               ↓
-                   Redirect Login      fetch()
-                                         ↓
-                                 POST /rag/query
-                                         ↓
-                                Send JWT + Question
-                                         ↓
-                                   FastAPI
-                                         ↓
-                                  Verify JWT
-                                         ↓
-                                 Identify User
-                                         ↓
-                                Get Department
-                                         ↓
-                            Apply Department Filter
-                                         ↓
-                         Retrieve Relevant Documents
-                                         ↓
-                                      RAG
-                                         ↓
-                                Generate Answer
-                                         ↓
-                               Return JSON Response
-                                         ↓
-                                  response.json()
-                                         ↓
-                             Save Question + Answer
-                                         ↓
-                                Chat History
-                                         ↓
-                              Display Answer
+ ┌───────┴───────┐
+ │               │
+YES              NO
+ ↓               ↓
+Display Error    Get JWT from
+Stop             localStorage
+                 ↓
+           Does JWT Exist?
+         ┌───────┴───────┐
+         │               │
+        NO              YES
+         ↓               ↓
+   Redirect Login      fetch()
+                         ↓
+                  POST /rag/query
+                         ↓
+                Send JWT + Question
+                         ↓
+                      FastAPI
+                         ↓
+                    Verify JWT
+                         ↓
+                   Identify User
+                         ↓
+                  Get Department
+                         ↓
+              Apply Department Filter
+                         ↓
+           Retrieve Relevant Documents
+                         ↓
+                        RAG
+                         ↓
+                 Generate Answer
+                         ↓
+                Return JSON Response
+                         ↓
+                   response.json()
+                         ↓
+              Save Question + Answer
+                         ↓
+                  Chat History
+                         ↓
+                 Display Answer
+```
 
 👨‍💼 Admin Page
 
 The Admin Page allows authorized administrators to add new users and assign them to departments.
 
 Admin Workflow
+
+```text
 Admin
   ↓
 Login Page
@@ -218,6 +227,7 @@ Save User in Database
 Return Response
   ↓
 Display Success Message
+```
 
 🔌 API Endpoints
 Method	Endpoint	Description
@@ -248,20 +258,21 @@ The application uses the user's department to control document access.
 
 Example:
 
+```text
 Engineering User
        ↓
 Engineering Department
        ↓
 Engineering Documents
+```
 
+```text
 Finance User
        ↓
 Finance Department
        ↓
 Finance Documents
-
-
-
+```
 
 
 ⚙️ Installation
