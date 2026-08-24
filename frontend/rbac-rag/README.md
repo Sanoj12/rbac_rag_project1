@@ -298,5 +298,4 @@ http://localhost:8000/docs
 
 Author
 Sanoj C SAM
-
 Completed as a learning and portfolio project.
