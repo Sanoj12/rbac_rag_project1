@@ -1,52 +1,38 @@
-from application.database.db import Session, User
-from application.auth.hashing import (
+from database.db import Session, User
+from auth.hashing import (
     hashing_password,
     verify_password
 )
 
-from sqlalchemy.exc import IntegrityError
 
 
-# =========================================================
+
 # ADD USER
-# =========================================================
 
-def add_user(
-    name,
-    email,
-    password,
-    department
-):
+
+def add_user(name,email,password,department):
 
     session = Session()
 
     try:
 
-        # -------------------------------------------------
         # Check whether email already exists
-        # -------------------------------------------------
+        
 
-        existing_user = session.query(User).filter(
-            User.email == email
-        ).first()
+        existing_user = session.query(User).filter(User.email == email).first()
 
         if existing_user:
 
-            return {
-                "error": "Email already exists"
-            }
+            return {"error": "Email already exists"}
 
-        # -------------------------------------------------
+        
         # Hash password
-        # -------------------------------------------------
+        
+        hashed_password = hashing_password(password)
 
-        hashed_password = hashing_password(
-            password
-        )
-
-        # -------------------------------------------------
+      
         # Create user
-        # -------------------------------------------------
+        
 
         user = User(
             name=name,
@@ -61,8 +47,7 @@ def add_user(
 
         session.refresh(user)
 
-        print(
-            "USER ADDED:",
+        print("USER ADDED:",
             user.email,
             user.department
         )
@@ -74,40 +59,20 @@ def add_user(
             "department": user.department
         }
 
-    except IntegrityError as e:
-
-        session.rollback()
-
-        print(
-            "DATABASE ERROR:",
-            repr(e)
-        )
-
-        return {
-            "error": "Email already exists"
-        }
+    
 
     except Exception as e:
 
         session.rollback()
 
-        print(
-            "ADD USER ERROR:",
-            repr(e)
-        )
+        print("ADD USER ERROR:",repr(e))
 
-        return {
-            "error": str(e)
-        }
+        return {"error": str(e) }
 
     finally:
 
         session.close()
 
-
-# =========================================================
-# LOGIN
-# =========================================================
 
 def login(
     email,
@@ -118,17 +83,15 @@ def login(
 
     try:
 
-        # -------------------------------------------------
+        
         # Find user
-        # -------------------------------------------------
+        
 
         user = session.query(User).filter(
             User.email == email
         ).first()
 
-        # -------------------------------------------------
-        # User doesn't exist
-        # -------------------------------------------------
+
 
         if not user:
 
@@ -138,9 +101,9 @@ def login(
 
             return None
 
-        # -------------------------------------------------
+        
         # Verify password
-        # -------------------------------------------------
+        
 
         if verify_password(
             password,
@@ -155,9 +118,9 @@ def login(
 
             return user
 
-        # -------------------------------------------------
+        
         # Wrong password
-        # -------------------------------------------------
+        
 
         print(
             "INVALID PASSWORD"

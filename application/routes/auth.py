@@ -1,8 +1,8 @@
 from fastapi import APIRouter,HTTPException
 from pydantic import BaseModel
-from application.services.user import login
+from services.user import login
 
-from application.auth.jwt import generate_jwt_token
+from auth.jwt import generate_jwt_token
 
 router =APIRouter()
 
@@ -12,35 +12,49 @@ class LoginRequest(BaseModel):
     password:str
 
 
-
 @router.post("/login")
-def login_user(data:LoginRequest):
+def login_user(data: LoginRequest):
 
     try:
 
-        user = login(data.email,data.password)
-        print(user)
-        print(user.department)
-        if not user:
+        # Call login function
+        user = login(
+            data.email,
+            data.password
+        )
+
+        # User not found / wrong password
+        if user is None:
             raise HTTPException(
                 status_code=401,
-                detail="invaild email or password"
+                detail="Invalid email or password"
             )
 
+        print("USER:", user)
+        print("DEPARTMENT:", user.department)
+
+        # Generate JWT
         token = generate_jwt_token(
             user.id,
             user.department
         )
 
-
-        return{
-            "token":token,
-            "department":user.department
+        return {
+            "access_token": token,
+            "user": {
+                "id": user.id,
+                "email": user.email,
+                "department": user.department
+            }
         }
 
+    except HTTPException:
+        raise
+
     except Exception as e:
-        print("ERROR:", repr(e))
+        print("LOGIN API ERROR:", repr(e))
+
         raise HTTPException(
             status_code=500,
-            detail=str(e)
-        )  
+            detail="Internal server error"
+        )

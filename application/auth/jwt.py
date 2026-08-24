@@ -20,7 +20,7 @@ def generate_jwt_token(user_id,department):
     }
 
     token = jwt.encode(payload,api_key,algorithm="HS256")
-    print(token)
+    
     return token
 
 

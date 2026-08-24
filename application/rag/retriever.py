@@ -1,12 +1,12 @@
-from application.rag.pinecone_store import index
-from application.rag.embedding import create_embeddings
+from rag.pinecone_store import index
+from rag.embedding import create_embeddings
 
-from application.rag.llm import generate_answer
-from application.rag.bm25_search import bm25,bm25_search,documents
-from application.rag.reranking import reranker_documents
+from rag.llm import generate_answer
+from rag.bm25_search import bm25,bm25_search,documents
+from rag.reranking import reranker_documents
 import time
 
-from application.rag.langfuse_config import langfuse
+from rag.langfuse_config import langfuse
 
 
 

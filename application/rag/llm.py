@@ -7,7 +7,7 @@ from groq import Groq
 
 
 
-BASE_DIR = Path(__file__).resolve().parents[2]
+BASE_DIR = Path(__file__).resolve().parents[1]
 
 ENV_FILE = BASE_DIR / ".env"
 
@@ -43,7 +43,7 @@ def generate_answer(prompt):
 
     response = client.chat.completions.create(
 
-        model="llama-3.1-8b-instant",
+        model="openai/gpt-oss-120b",
 
         messages=[
             {
@@ -52,9 +52,6 @@ def generate_answer(prompt):
             }
         ],
 
-        temperature=0,
-
-        max_tokens=512
     )
 
     return response.choices[0].message.content

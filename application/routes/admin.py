@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from application.services.user import add_user as create_user
+from services.user import add_user as create_user
  
 
 router =APIRouter()

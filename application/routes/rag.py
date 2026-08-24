@@ -2,8 +2,8 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from fastapi import Depends
 
-from application.rag.retriever import retrieve_answer
-from application.auth.jwt import verify_token
+from rag.retriever import retrieve_answer
+from auth.jwt import verify_token
 
 from fastapi.security import HTTPBearer
 

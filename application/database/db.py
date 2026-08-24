@@ -18,7 +18,7 @@ class User(Base):
 
 
 ###db connection
-engine = create_engine("sqlite:///C:/Users/sanoj/rbac_rag_project1/database/rbac2.db")
+engine = create_engine("sqlite:///C:/Users/sanoj/rbac_rag_project1/application/rbac2.db")
 Session = sessionmaker(bind=engine)
 
 

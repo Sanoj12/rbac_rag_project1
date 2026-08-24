@@ -1,0 +1,19 @@
+services:
+
+  backend:
+
+    build: ./application
+    container_name: rbac_backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+
+  frontend:
+
+    build:  ./frontend/rbac-rag
+    container_name: rbac_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
