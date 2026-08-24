@@ -1,250 +1,270 @@
-### RBAC RAG Chatbot -Frontend
+RBAC RAG Chatbot — Frontend
 
-A department-based document Question & Answer chatbot frontend built using Next.js and React.
+A department-based document Question & Answer chatbot frontend built using Next.js, React, and TypeScript.
 
-The application allows users to log in,ask questions from authorized documents,and receive answers from the rag backend.
+The application allows users to log in, ask questions from authorized documents, and receive answers from the RAG backend.
 
 Admins can also add new users and assign them to departments.
 
+📌 Project Overview
 
-
-## Project Overview
-
-This project is a role-based on their department
+This project is a Role-Based Access Control (RBAC) application where document access is based on the user's department.
 
 For example:
- - Engineering users can access Engineering documents.
- - Finance users can access Finance documents.
 
+Engineering users can access Engineering documents.
+Finance users can access Finance documents.
 
-frontend communicate with a Fastapi backend through REST apis.
+The frontend communicates with a FastAPI backend through REST APIs.
 
+✨ Features
+User Login
+JWT Authentication
+Protected Chat Page
+User Information Display
+Admin Page
+Add New Users
+Department Assignment
+RAG Question & Answer
+Chat History
+Loading State
+Error Handling
+Logout
+🛠️ Technologies Used
+Frontend
+Next.js
+TypeScript
+React
+JSX
+React Hooks
+App Router
+Authentication
+JWT Authentication
+LocalStorage
+Backend Communication
+REST APIs
+Fetch API
+FastAPI
+RAG
+Retrieval-Augmented Generation (RAG)
+Department-based document filtering
+📄 Pages
+🔐 Login Page
 
-## Features
-
--User Login
--JWT Authentication
--Protected Chat page
--User Information Display
--Admin Page
--Add new Users
--Department assignment
--RAG Question & Answer
--Chat History
--Loading State
--Error Handling
--Logout
-
-
-
-###Techologies Used
-
-- Next.js
-- Typescript
-- React
-
-### Authenication
-
-- JWT
-- LocalStorage
-
-
-###Pages
-
-Login Page
+File:
 
 app/login/page.tsx
 
-The frontend sends the login request to the fastapi backend
 
-1.Login workflow
+The login page allows users to authenticate using their email and password.
 
+Login Workflow
 User
- ↓
+  ↓
 Login Page
- ↓
+  ↓
 Enter Email + Password
- ↓
+  ↓
 Click Login
- ↓
+  ↓
 handleLogin()
- ↓
+  ↓
 Validate Input
- ↓
+  ↓
 POST /auth/login
- ↓
+  ↓
 FastAPI
- ↓
+  ↓
 Check Email + Password
- ↓
+  ↓
 Valid?
- ├── NO
- │    ↓
- │  Return Error
- │    ↓
- │  Display Error
- │
- └── YES
-      ↓
-   Generate JWT
-      ↓
-   Return JWT + User Information
-      ↓
-   Store access_token(localStorage)
-      ↓
-   Store user information
-      ↓
-   Redirect
-      ↓
-   Chat / Admin Page
+ ┌───────────────┴───────────────┐
+ │                               │
+NO                              YES
+ ↓                               ↓
+Return Error                 Generate JWT
+ ↓                               ↓
+Display Error             Return JWT + User Info
+                                 ↓
+                         Store access_token
+                           in localStorage
+                                 ↓
+                         Store User Information
+                                 ↓
+                              Redirect
+                                 ↓
+                         Chat / Admin Page
 
+💬 Chat Page
 
-2.Chat Page
+File:
 
 app/chat/page.tsx
 
-The chat page allows authenticated users to ask questions.
 
-Chat workflow
+The chat page allows authenticated users to ask questions from documents they are authorized to access.
 
+Chat Workflow
 User
- ↓
+  ↓
 Login
- ↓
+  ↓
 JWT Token
- ↓
+  ↓
 Chat Page
- ↓
+  ↓
 Enter Question
- ↓
+  ↓
 Click Send
- ↓
+  ↓
 sendQuestion()
- ↓
+  ↓
 Check Question
- ↓
+  ↓
 Is Question Empty?
- ├── YES
- │    ↓
- │  Display Error
- │    ↓
- │  Stop
- │
- └── NO
-      
-      ↓
-   Get JWT from localStorage
-      ↓
-   Does JWT Exist?
-   ├── NO
-   │    ↓
-   │  Redirect to Login
-   │
-   └── YES
-        ↓
-      fetch()
-        ↓
-   POST /rag/query
-        ↓
-   Send JWT + Question
-        ↓
-      FastAPI
-        ↓
-    Verify JWT
-        ↓
-   Identify User
-        ↓
-   Get Department
-        ↓
-   Apply Department Filter
-        ↓
-   Retrieve Relevant Documents
-        ↓
-        RAG
-        ↓
-   Generate Answer
-        ↓
-   Return JSON Response
-        ↓
-   response.json()
-        ↓
-   Save Question + Answer
-        ↓
-   Chat History
-        ↓
-   Clear Question
-  
-        ↓
-   Display Answer
+ ┌───────────────┴───────────────┐
+ │                               │
+YES                              NO
+ ↓                               ↓
+Display Error              Get JWT from
+Stop                        localStorage
+                                 ↓
+                           Does JWT Exist?
+                         ┌───────┴───────┐
+                         │               │
+                        NO              YES
+                         ↓               ↓
+                   Redirect Login      fetch()
+                                         ↓
+                                 POST /rag/query
+                                         ↓
+                                Send JWT + Question
+                                         ↓
+                                   FastAPI
+                                         ↓
+                                  Verify JWT
+                                         ↓
+                                 Identify User
+                                         ↓
+                                Get Department
+                                         ↓
+                            Apply Department Filter
+                                         ↓
+                         Retrieve Relevant Documents
+                                         ↓
+                                      RAG
+                                         ↓
+                                Generate Answer
+                                         ↓
+                               Return JSON Response
+                                         ↓
+                                  response.json()
+                                         ↓
+                             Save Question + Answer
+                                         ↓
+                                Chat History
+                                         ↓
+                              Display Answer
 
+👨‍💼 Admin Page
 
-3.Admin Page
+The Admin Page allows authorized administrators to add new users and assign them to departments.
 
-to add new users and assign them to departments.
-
+Admin Workflow
 Admin
- ↓
+  ↓
 Login Page
- ↓
+  ↓
 Enter Email + Password
- ↓
+  ↓
 Click Login
- ↓
+  ↓
 POST /auth/login
- ↓
+  ↓
 FastAPI
- ↓
+  ↓
 Verify Admin
- ↓
+  ↓
 Generate JWT
- ↓
+  ↓
 Return Token
- ↓
+  ↓
 Store Token
- ↓
+  ↓
 Redirect to Admin Page
- ↓
+  ↓
 Admin Page
- ↓
+  ↓
 Enter User Details
- ↓
+  ↓
 Name + Email + Password + Department
- ↓
+  ↓
 Click Add User
- ↓
+  ↓
 POST /admin/add-user
- ↓
+  ↓
 Send JWT + User Details
- ↓
+  ↓
 FastAPI
- ↓
+  ↓
 Verify JWT
- ↓
+  ↓
 Check Admin Permission
- ↓
+  ↓
 Create User
- ↓
+  ↓
 Save User in Database
- ↓
+  ↓
 Return Response
- ↓
+  ↓
 Display Success Message
 
+🔌 API Endpoints
+Method	Endpoint	Description
+POST	/auth/login	Login user
+POST	/admin/add-user	Add a new user
+POST	/rag/query	Ask a RAG question
+
+🔐 Authentication
+
+The application uses JWT authentication.
+
+After a successful login, the FastAPI backend returns:
+
+JWT access token
+User information
+
+The frontend stores the access token in:
+
+localStorage
 
 
-API Endpointes:
-
-1. POST  ->   /auth/login  -> login user
-
-2. POST  -> /admin/add-user  -> Add new user
-
-3. POST ->  /rag/query  -> ask rag question
+The JWT is then used when communicating with protected backend endpoints.
 
 
+🏢 Department-Based Authorization
+
+The application uses the user's department to control document access.
+
+Example:
+
+Engineering User
+       ↓
+Engineering Department
+       ↓
+Engineering Documents
+
+Finance User
+       ↓
+Finance Department
+       ↓
+Finance Documents
 
 
 
-## Installation
+
+
+⚙️ Installation
 
 1. Clone Repository
 git clone https://github.com/Sanoj12/rbac_rag_project1
@@ -255,47 +275,66 @@ cd frontend/rbac-rag
 3. Install Dependencies
 npm install
 
-4. Create .env.local
+4. Create Environment File
+
+Create a .env.local file in the frontend project:
+
 NEXT_PUBLIC_API_URL=http://localhost:8000
 
 5. Start Next.js
 npm run dev
+
 
 The frontend will normally run at:
 
 http://localhost:3000
 
 
-##Backend Requirement
-
-The FastAPI backend must be running.
-
-Example:
+Start the backend using:
 
 uvicorn main:app --reload
-
-Backend:
+The backend will normally run at:
 
 http://localhost:8000
+
 
 FastAPI Swagger UI:
 
 http://localhost:8000/docs
 
+🎯 Learning
 
+This project helped me learn and practice:
 
-##Learning
+Next.js App Router
+React Components
+JSX
+TypeScript
+React Hooks
+useState
+useEffect
+LocalStorage
+Fetch API
+Form Handling
+JWT Authentication
+REST API Integration
+Connecting Next.js with FastAPI
 
-  -Nextjs App Router
-  -React Components
-  -JSX
-  -Hooks(useState & useEffect)
-  -LocalStorage
-  -fetchAPI
-  -form handling
-  -Connecting Next.js with FastAPI
+🚀 Future Improvements
 
+Possible future improvements include:
 
-Author
+Better UI/UX
+Document upload functionality
+Admin document management
+User management dashboard
+
+👤 Author
+
 Sanoj C SAM
+
 Completed as a learning and portfolio project.
+
+⭐ Project
+
+If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
