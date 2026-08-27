@@ -1,185 +1,118 @@
+### RBAC RAG Chatbot
 
-Title:   RBAC RAG Chatbot
+A full-stack, department-based Question & Answer chatbot built using Next.js, React, TypeScript, FastAPI, Python, JWT Authentication, and RAG.
 
-##A secure Role-Baesd Access Control(RBAC) Chatbot built using  Retrieval-Augmented Generation (RAG).The system autenticates users enforces role-based permissions,retreive authorized documents,and generate context-aware response using LLMs.
+The project uses Role-Based Access Control (RBAC) and department-based document filtering to ensure users can only access documents authorized for their department.
 
-Overview
 
-This project combines RAG + RBAC to create a secure AI-powered question-answering system
-
-The application:
- 
- 1.Authenticates the user with JWT
- 2.identifies the users department
- 3.Load documents and Converts documents into smaller chunks.
- 4.Generates embedding for document chunks
- 5.Stores embeddings in pinecone
- 6.Retrieves relevant documents using semantic search.
- 7.Performs keyword search using BM25.
- 8.Combines semantic search + keyword search and reranking retrieved documents.
- 9.Sends relevant context to the LLM.
- 10.Generates an answer based only on the retrieved documents.
-
-## 🔐 User Authentication Flow
+## Application Workflow
 
 ```text
-User Login
-    │
-    ▼
-Verify Email & Password (Bcrypt)
-    │
-    ▼
-Generate JWT Token
-    │
-    ▼
-Return Token to User
-    │
-    ▼
-User Sends JWT with API Requests
-    │
-    ▼
-Server Verifies JWT token
-    │
-    ▼
-Access Granted / Access Denied
+                         RBAC RAG CHATBOT
+                                │
+                ┌───────────────┴───────────────┐
+                │                               │
+                ▼                               ▼
+           FRONTEND                         BACKEND
+        Next.js / React                  FastAPI / Python
+                │                               │
+                │          REST API             │
+                └───────────────►◄──────────────┘
+                                                │
+                                                ▼
+                                      JWT Authentication
+                                                │
+                                                ▼
+                                      RBAC Authorization
+                                                │
+                                                ▼
+                                      Department Filtering
+                                                │
+                                                ▼
+                                           RAG Pipeline
+                                                │
+                            ┌───────────────────┴──────────────────┐
+                            │                                      │
+                            ▼                                      ▼
+                       Pinecone                                  BM25
+                    Semantic Search                         Keyword Search
+                            │                                      │
+                            └───────────────────┬──────────────────┘
+                                                ▼
+                                           Re-Ranking
+                                                │
+                                                ▼
+                                           LLM / Groq
+                                                │
+                                                ▼
+                                           Final Answer
+                                                │
+                                                ▼
+                                            Frontend
+
+
+
 ```
 
-## 🏢 RBAC Workflow
+### Frontend
 
-User Login(Email & Password)
-    ↓
-JWT Authentication
-    ↓
-Identify User & Department
-    ↓
-Department-Based Access
-    ↓
-├── Finance → Finance Documents
-├── HR → HR Documents
-├── Marketing → Marketing Documents
-├── Engineering → Engineering Documents
-└── General → General Documents
-    ↓
-User Query
-    ↓
-Query Embedding
-    ↓
-Pinecone Vector Database Semantic Search(department filtering)
-    ↓
-BM25 Keyword Search
-    ↓
-Combine semantic search + keyword search
-    ↓
-Re-Ranking
-    ↓
-Remove Duplicates
-    ↓
-Top Relevant Documents
-    ↓
-send Relevant Context
-    ↓
-Groq LLM
-    ↓
-Generate Response
-    ↓
-Display Response to User(Streamlit)
-                    
+The frontend is built with Next.js, React, and TypeScript.
 
-Features
-  1. JWT authentication
-  2. Role-Based Access Control
-  3. Department-based document filtering
-  4. PDF and Markdown document processing
-  5. Document chunking
-  6. Text embeddings
-  7. Semantic search
-  8. BM25 keyword search
-  9.Document reranking
- 10.LLM-based answer generation
- 11.Retrieval-Augmented Generation
- 12.Langfuse observability
- 13.Docker support
- 14.GitHub Actions CI/CD
+For frontend setup, authentication flow, chat page, admin page, API integration, and frontend architecture
 
+see:
 
- Techologies Used       
+Backend
+The backend is built with Python and FastAPI.
 
-| Category                 | Technology                        |
-| ------------------------ | --------------------------------- |
-| **Programming Language** | Python                            |
-| **Backend**              | FastAPI                           |
-| **Frontend**             | Streamlit                         |
-| **Authentication**       | JWT                               |
-| **Password Hashing**     | Bcrypt                            |
-| **Database**             | SQLite                            |
-| **ORM**                  | SQLAlchemy                        |
-| **Vector Database**      | Pinecone                          |
-| **Embeddings**           | Sentence Transformers             |
-| **Semantic Search**      | Pinecone Vector Search            |
-| **Keyword Search**       | BM25                              |
-| **Hybrid Retrieval**     | Pinecone + BM25                   |
-| **Re-Ranking**           | Cross-Encoder                     |
-| **LLM**                  | Groq                              |
-| **Document Processing**  | Docling                           |
-| **Text Chunking**        | RecursiveCharacterTextSplitter    |
-| **Observability**        | Langfuse                          |
-| **Containerization**     | Docker                            |
-| **Version Control**      | Git / GitHub                      |
+For backend setup, JWT authentication, RBAC, department authorization, RAG pipeline, Pinecone, BM25, re-ranking, Langfuse, and API documentation, see:
 
+👉 Backend README
 
-
-
-Installation
-
-1. Clone the repository
+🚀 Quick Start
+1. Clone Repository
 git clone https://github.com/Sanoj12/rbac-rag-chatbot1.git
 
 cd rbac-rag-chatbot1
 
-2. Create virtual environment
-uv venv
+2. Start Application
+Follow the instructions in the:
 
-3. Activate environment
+application/readme.md
 
-Windows:
-.venv\Scripts\activate
+3. Start Frontend
+Follow the instructions in the:
 
-4. Install dependencies
-uv pip install -r requirements.txt
+frontend/README.md
 
+Once both applications are running:
 
-Environment Variables
+Frontend → http://localhost:3000
+Application  → http://localhost:8000
+Swagger  → http://localhost:8000/docs
 
-Create a .env file:
+🔐 Department-Based Access
+Documents are filtered based on the authenticated user's department.
 
-PINECONE_API_KEY=
-GROQ_API_KEY=
-JWT_SECRET_KEY
-LANGFUSE_SECRET_KEY=y
-LANGFUSE_PUBLIC_KEY=
-LANGFUSE_HOST=
+Engineering User
+       ↓
+Engineering Department
+       ↓
+Engineering Documents
 
-Never upload .env or API keys to GitHub.
+Finance User
+       ↓
+Finance Department
+       ↓
+Finance Documents
 
-Add this to .gitignore:
+This ensures that users retrieve information only from documents they are authorized to access.
 
-.env
-.venv/
-__pycache__/
-*.pyc
+👤 Author
+Sanoj C SAM
 
+Learning and portfolio project.
 
+⭐ Project
+If you find this project useful or interesting, consider giving the repository a ⭐.
 
-##  Run Application
-
-- Start FastAPI Server
-
-```bash
-uvicorn application.main:app --reload
-```
-
--Start Streamlit UI
-streamlit run app.py
-```bash
-streamlit run app.py
-```
